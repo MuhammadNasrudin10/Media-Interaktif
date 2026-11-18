@@ -1,0 +1,202 @@
+[
+    {
+        "soal0": {
+            "soal": "Hasil dari \\(4 \\times \\dfrac{2}{9}\\) adalah...",
+            "a": "\\(\\dfrac{8}{9}\\)",
+            "b": "\\(\\dfrac{6}{9}\\)",
+            "c": "\\(\\dfrac{4}{9}\\)",
+            "d": "\\(\\dfrac{2}{9}\\)",
+            "benar": "a"
+        }
+    },
+    {
+        "soal1": {
+            "soal": "Hasil dari \\(6 \\times \\dfrac{3}{7}\\) adalah...",
+            "a": "\\(\\dfrac{9}{7}\\)",
+            "b": "\\(\\dfrac{18}{7}\\)",
+            "c": "\\(\\dfrac{12}{7}\\)",
+            "d": "\\(\\dfrac{15}{7}\\)",
+            "benar": "b"
+        }
+    },
+    {
+        "soal2": {
+            "soal": "Hasil dari \\(\\dfrac{2}{3} \\times \\dfrac{4}{5}\\) adalah...",
+            "a": "\\(\\dfrac{8}{15}\\)",
+            "b": "\\(\\dfrac{6}{15}\\)",
+            "c": "\\(\\dfrac{8}{8}\\)",
+            "d": "\\(\\dfrac{2}{15}\\)",
+            "benar": "a"
+        }
+    },
+    {
+        "soal3": {
+            "soal": "Hasil dari \\(\\dfrac{3}{4} \\times \\dfrac{5}{7}\\) adalah...",
+            "a": "\\(\\dfrac{8}{28}\\)",
+            "b": "\\(\\dfrac{15}{11}\\)",
+            "c": "\\(\\dfrac{15}{28}\\)",
+            "d": "\\(\\dfrac{12}{28}\\)",
+            "benar": "c"
+        }
+    },
+    {
+        "soal4": {
+            "soal": "Hasil dari \\(\\dfrac{5}{6} \\times \\dfrac{2}{3}\\) adalah...",
+            "a": "\\(\\dfrac{7}{18}\\)",
+            "b": "\\(\\dfrac{10}{9}\\)",
+            "c": "\\(\\dfrac{10}{12}\\)",
+            "d": "\\(\\dfrac{10}{18}\\)",
+            "benar": "d"
+        }
+    },
+    {
+        "soal5": {
+            "soal": "Hasil dari \\(1\\dfrac{1}{2} \\times \\dfrac{2}{3}\\) adalah...",
+            "a": "\\(\\dfrac{1}{3}\\)",
+            "b": "\\(\\dfrac{2}{3}\\)",
+            "c": "\\(\\dfrac{5}{6}\\)",
+            "d": "1",
+            "benar": "d"
+        }
+    },
+    {
+        "soal6": {
+            "soal": "Hasil dari \\(2\\dfrac{1}{3} \\times \\dfrac{3}{4}\\) adalah...",
+            "a": "\\(\\dfrac{7}{12}\\)",
+            "b": "\\(\\dfrac{7}{4}\\)",
+            "c": "\\(\\dfrac{5}{4}\\)",
+            "d": "\\(\\dfrac{7}{3}\\)",
+            "benar": "b"
+        }
+    },
+    {
+        "soal7": {
+            "soal": "Ibu memiliki \\(3\\dfrac{1}{2}\\) kg beras. Jika setiap kg berisi \\(\\dfrac{2}{3}\\) bagian liter beras super, berapa liter beras super milik Ibu seluruhnya?",
+            "a": "\\(\\dfrac{7}{3}\\) liter",
+            "b": "\\(\\dfrac{5}{3}\\) liter",
+            "c": "\\(\\dfrac{7}{6}\\) liter",
+            "d": "2 liter",
+            "benar": "a"
+        }
+    },
+    {
+        "soal8": {
+            "soal": "Paman membeli 4 kantong plastik berisi gula. Jika setiap kantong berisi \\(\\dfrac{3}{8}\\) kg gula, berapa kg total berat gula Paman?",
+            "a": "\\(\\dfrac{7}{8}\\) kg",
+            "b": "\\(\\dfrac{12}{32}\\) kg",
+            "c": "\\(\\dfrac{12}{8}\\) kg",
+            "d": "\\(\\dfrac{3}{2}\\) kg",
+            "benar": "c"
+        }
+    },
+    {
+        "soal9": {
+            "soal": "Ani mengisi air sebanyak 12 gelas. Jika tiap gelas berisi \\(\\dfrac{1}{4}\\) liter, berapa liter air seluruhnya?",
+            "a": "2 liter",
+            "b": "4 liter",
+            "c": "5 liter",
+            "d": "3 liter",
+            "benar": "d"
+        }
+    },
+    {
+        "soal10": {
+            "soal": "Hasil dari \\(6 : \\dfrac{2}{3}\\) adalah...",
+            "a": "4",
+            "b": "9",
+            "c": "6",
+            "d": "12",
+            "benar": "b"
+        }
+    },
+    {
+        "soal11": {
+            "soal": "Hasil dari \\(8 : \\dfrac{4}{5}\\) adalah...",
+            "a": "8",
+            "b": "10",
+            "c": "6",
+            "d": "12",
+            "benar": "b"
+        }
+    },
+    {
+        "soal12": {
+            "soal": "Hasil dari \\(\\dfrac{4}{5} : 2\\) adalah...",
+            "a": "\\(\\dfrac{8}{5}\\)",
+            "b": "\\(\\dfrac{2}{5}\\)",
+            "c": "\\(\\dfrac{1}{5}\\)",
+            "d": "\\(\\dfrac{4}{2}\\)",
+            "benar": "b"
+        }
+    },
+    {
+        "soal13": {
+            "soal": "Hasil dari \\(\\dfrac{6}{7} : 3\\) adalah...",
+            "a": "\\(\\dfrac{2}{7}\\)",
+            "b": "\\(\\dfrac{18}{7}\\)",
+            "c": "\\(\\dfrac{3}{7}\\)",
+            "d": "\\(\\dfrac{6}{21}\\)",
+            "benar": "a"
+        }
+    },
+    {
+        "soal14": {
+            "soal": "Hasil dari \\(\\dfrac{3}{5} : \\dfrac{1}{2}\\) adalah...",
+            "a": "\\(\\dfrac{3}{10}\\)",
+            "b": "\\(\\dfrac{5}{6}\\)",
+            "c": "\\(\\dfrac{6}{5}\\)",
+            "d": "\\(\\dfrac{1}{5}\\)",
+            "benar": "c"
+        }
+    },
+    {
+        "soal15": {
+            "soal": "Hasil dari \\(\\dfrac{4}{9} : \\dfrac{2}{3}\\) adalah...",
+            "a": "\\(\\dfrac{8}{27}\\)",
+            "b": "\\(\\dfrac{6}{9}\\)",
+            "c": "\\(\\dfrac{12}{18}\\)",
+            "d": "\\(\\dfrac{2}{3}\\)",
+            "benar": "d"
+        }
+    },
+    {
+        "soal16": {
+            "soal": "Hasil dari \\(1\\dfrac{1}{3} : 4\\) adalah...",
+            "a": "\\(\\dfrac{4}{3}\\)",
+            "b": "\\(\\dfrac{1}{12}\\)",
+            "c": "\\(\\dfrac{1}{3}\\)",
+            "d": "\\(\\dfrac{16}{3}\\)",
+            "benar": "c"
+        }
+    },
+    {
+        "soal17": {
+            "soal": "Pak Bibi mempunyai 15 kg beras. Beras tersebut dibagikan kepada tetangga dengan masing-masing menerima \\(\\dfrac{3}{4}\\) kg. Berapa tetangga yang menerima beras?",
+            "a": "20 orang",
+            "b": "15 orang",
+            "c": "12 orang",
+            "d": "18 orang",
+            "benar": "a"
+        }
+    },
+    {
+        "soal18": {
+            "soal": "Ibu mempunyai \\(2\\dfrac{1}{2}\\) liter minyak goreng. Minyak tersebut akan dimasukkan ke dalam botol kecil berkapasitas \\(\\dfrac{1}{2}\\) liter. Berapa botol yang dibutuhkan Ibu?",
+            "a": "3 botol",
+            "b": "4 botol",
+            "c": "6 botol",
+            "d": "5 botol",
+            "benar": "d"
+        }
+    },
+    {
+        "soal19": {
+            "soal": "Pak Ahmad membeli tepung sebanyak 12 kg. Tepung tersebut akan dikemas ke dalam beberapa kantong plastik, di mana tiap kantong berisi \\(\\dfrac{3}{2}\\) kg tepung. Berapa kantong plastik yang dibutuhkan Pak Ahmad?",
+            "a": "6 kantong",
+            "b": "8 kantong",
+            "c": "10 kantong",
+            "d": "12 kantong",
+            "benar": "b"
+        }
+    }
+]

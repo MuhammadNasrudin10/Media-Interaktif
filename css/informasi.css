@@ -1,0 +1,127 @@
+.button {
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 3px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: #0D6EFD;
+    z-index: 1;
+}
+
+.active{
+    content: '';
+    padding: 0.8em 1.7em;
+    border-radius: .3em;
+    position: relative;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 3px solid black;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: black;
+    z-index: 1;
+    background-color: #0D6EFD;
+}
+
+.button::before, .button::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: #0D6EFD;
+    transition: 1s ease;
+}
+
+.button::before {
+    top: -1em;
+    left: -1em;
+}
+
+.button::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.button:hover::before, .button:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.button:hover {
+    color: rgb(10, 25, 30);
+}
+/* .button:active {
+    filter: brightness(.8);
+} */
+
+.konten{
+    background-color: #fff;
+    min-height: 490px;
+    max-height: 490px;
+    height: 50%;
+    overflow: auto;
+    box-sizing: border-box;
+    text-align: justify;
+    border: 4px solid #0D6EFD;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Informasi Ukuran Browser */
+#gambarBrowser img:hover {
+    filter: brightness(70%);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+
+/* Informasi Materi */
+.gambar-1:hover {
+    box-shadow: yellow 0 8px 16px 0 rgba(255, 255, 0, 0.5);
+    border-radius: 1rem;
+    background-color: transparent;
+    border: dashed 2px black;
+    cursor: pointer;
+}
+
+.gambar-2:hover {
+    box-shadow: 0 8px 16px 0 rgba(63, 105, 132, 0.5);
+    border-radius: 1rem;
+    background-color: transparent;
+    border: dashed 2px black;
+    cursor: pointer;
+}
+
+.gambar-3:hover {
+    box-shadow: 0 8px 16px 0 rgba(237, 122, 27, 0.5);
+    border-radius: 1rem;
+    background-color: transparent;
+    border: dashed 2px black;
+    cursor: pointer;
+}
+
+/* Tujuan Pembelajaran */
+ol.custom-list {
+    list-style-type: none;
+    counter-reset: custom-counter;
+}
+
+ol.custom-list li {
+    counter-increment: custom-counter;
+}
+
+ol.custom-list li::before {
+    content: counter(custom-counter) ") ";
+}

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/guru.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Hasil Kuis 1 | Dashboard Guru</title>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Portal Guru</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='bx bx-home-alt'></i>
+                    <span class="nama_menu">Beranda Materi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda Materi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="guru.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span class="nama_menu">Data Siswa</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru.html">Data Siswa</a></li>
+                </ul>
+            </li>
+            <!-- MENU MANAJEMEN SOAL -->
+            <li>
+                <a href="../manajemenSoal.html">
+                    <i class='bx bx-edit'></i>
+                    <span class="nama_menu">Manajemen Soal</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="../manajemenSoal.html">Manajemen Soal</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-active">
+                    <a href="kuis1.html">
+                        <i class='bx bx-abacus'></i>
+                        <span class="nama_menu">Hasil Kuis 1</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="kuis1.html">Hasil Kuis 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="kuis2.html">
+                    <i class='bx bx-calculator'></i>
+                    <span class="nama_menu">Hasil Kuis 2</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="kuis2.html">Hasil Kuis 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="evaluasi.html">
+                    <i class='bx bx-task'></i>
+                    <span class="nama_menu">Hasil Evaluasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="evaluasi.html">Hasil Evaluasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="rekapitulasi.html">
+                    <i class='bx bx-bar-chart-square'></i>
+                    <span class="nama_menu">Rekapitulasi Akhir</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="rekapitulasi.html">Rekapitulasi Akhir</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Profile Footer -->
+        <div class="profile-details">
+            <div class="name-job">
+                <div class="profile_name" id="userlink">Memuat Nama...</div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Akses Pengajar</span>
+            </div>
+            <i class='bx bx-log-out' id="btn-logout" title="Keluar dari Dashboard"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="home-section">
+        <!-- Top Navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">Monitoring Kuis 1</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Konten Inti -->
+        <div class="konten">
+            <div class="inti-materi">
+                <!-- Header Title -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h4 class="fw-bold mb-1" style="color: #0f172a;">Hasil Capaian Siswa: Kuis 1</h4>
+                        <p class="text-muted mb-0" style="font-size: 0.9rem;">Pantau nilai, waktu pengerjaan, dan rincian jawaban siswa (klik baris untuk melihat jawaban).</p>
+                    </div>
+                </div>
+
+                <!-- Tabel Data Siswa -->
+                <div class="table-responsive">
+                    <table id="datasiswa" class="table table-hover align-middle" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th width="5%"></th>
+                                <th width="35%">Nama Siswa</th>
+                                <th width="15%">Total Nilai</th>
+                                <th width="25%">Waktu Submit</th>
+                                <th width="20%">Hari/Tanggal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <!-- Data Firebase masuk ke sini -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector("#sidebarBtn");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <!-- Auth Script -->
+    <script type="module">
+        let userlink = document.getElementById('userlink');
+        let nama = sessionStorage.getItem('nama');
+
+        function getNama() {
+            if (nama == null) {
+                window.location = "/loginGuru.html";
+            } else {
+                userlink.innerText = nama;
+            }
+        }
+        getNama();
+
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Keluar Dashboard?",
+                text: "Sesi Anda sebagai pengajar akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    sessionStorage.removeItem('nama');
+                    window.location = "/loginGuru.html";
+                }
+            });
+        });
+    </script>
+
+    <!-- Firebase & DataTabel Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCb8S9cTRe1Qppb2r0rqz3xA5vIL1wZrtI",
+            authDomain: "ta-media.firebaseapp.com",
+            databaseURL: "https://ta-media-default-rtdb.firebaseio.com",
+            projectId: "ta-media",
+            storageBucket: "ta-media.appspot.com",
+            messagingSenderId: "20586336998",
+            appId: "1:20586336998:web:f73665ad8ddf9e183ce127"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const usersRef = ref(db, 'kuis1/');
+
+        /* Formatting function for row details (Expanded Data) */
+        function format(d) {
+            var jawabanHTML = '';
+            var urutan = 1;
+            for (var i = 0; i < d.jawabannya.length; i++) {
+                jawabanHTML += `<td style="padding: 10px; font-weight: 500;">${urutan}. <span class="text-primary">${d.jawabannya[i]}</span></td>`;
+                urutan++;
+            }
+
+            var kunciJawaban = `<td style="padding: 10px;">1. a</td>` +
+                `<td style="padding: 10px;">2. c</td>` +
+                `<td style="padding: 10px;">3. b</td>` +
+                `<td style="padding: 10px;">4. a</td>` +
+                `<td style="padding: 10px;">5. b</td>` +
+                `<td style="padding: 10px;">6. a</td>` +
+                `<td style="padding: 10px;">7. b</td>` +
+                `<td style="padding: 10px;">8. a</td>` +
+                `<td style="padding: 10px;">9. d</td>` +
+                `<td style="padding: 10px;">10. c</td>`;
+
+            return (
+                `<div style="background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e1;">` +
+                `<table class="table table-sm table-borderless m-0" style="font-size: 0.9rem;">` +
+                `<tr><td class="fw-bold text-muted" width="140px">Kunci Jawaban:</td>${kunciJawaban}</tr>` +
+                `<tr><td class="fw-bold text-muted">Jawaban Siswa:</td>${jawabanHTML}</tr>` +
+                `</table></div>`
+            );
+        }
+
+        $(document).ready(function () {
+            var table;
+
+            if (!$.fn.DataTable.isDataTable('#datasiswa')) {
+                table = $('#datasiswa').DataTable({
+                    rowId: 'id',
+                    stateSave: true,
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/id.json',
+                        search: "Cari Siswa:",
+                    },
+                    columns: [
+                        {
+                            className: 'dt-control text-center',
+                            orderable: false,
+                            data: null,
+                            defaultContent: `<i class='bx bx-chevron-right fs-5 text-primary' style='cursor:pointer;'></i>`,
+                        },
+                        { 
+                            data: 'Nama',
+                            render: function(data) { return `<span class="fw-semibold">${data}</span>`; }
+                        },
+                        { 
+                            data: 'Nilai',
+                            render: function(data) {
+                                let badgeClass = parseInt(data) >= 70 ? 'bg-success' : 'bg-danger';
+                                return `<span class="badge ${badgeClass} fs-6">${data}</span>`;
+                            }
+                        },
+                        { data: 'Waktu' },
+                        { data: 'Hari' },
+                    ],
+                    order: [[1, 'asc']],
+                });
+            } else {
+                table = $('#datasiswa').DataTable();
+            }
+
+            // Expanding child rows
+            $('#datasiswa').on('click', 'tbody td.dt-control', function () {
+                var tr = $(this).closest('tr');
+                var row = table.row(tr);
+                var icon = $(this).find('i');
+
+                if (row.child.isShown()) {
+                    row.child.hide();
+                    icon.removeClass('bx-chevron-down').addClass('bx-chevron-right');
+                    tr.removeClass('bg-light');
+                } else {
+                    row.child(format(row.data())).show();
+                    icon.removeClass('bx-chevron-right').addClass('bx-chevron-down');
+                    tr.addClass('bg-light');
+                }
+            });
+
+            // Fetch and populate
+            onValue(usersRef, function (snapshot) {
+                var data = snapshot.val();
+                var dataArray = [];
+
+                for (var key in data) {
+                    if (data.hasOwnProperty(key)) {
+                        dataArray.push({
+                            id: key,
+                            Nama: data[key].nama,
+                            Nilai: data[key].nilai,
+                            Waktu: data[key].waktu,
+                            Hari: data[key].hari,
+                            jawabannya: data[key].jawabannya,
+                        });
+                    }
+                }
+                table.clear().rows.add(dataArray).draw();
+            });
+        });
+    </script>
+</body>
+
+</html>

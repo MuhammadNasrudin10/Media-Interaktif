@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/css/style_materi.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <title>Latihan Pembagian Pecahan Campuran dengan Bilangan Asli | Materi Siswa</title>
+</head>
+
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Menu Materi</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='uil uil-estate'></i>
+                    <span class="nama_menu">Beranda</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu">
+                    <a href="../Subbab1/perkalian1_1.html">
+                        <i class='uil uil-abacus'></i>
+                        <span class="nama_menu">Perkalian</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab1/perkalian1_1.html">Perkalian</a></li>
+                    <li><a href="../Subbab1/perkalian1_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a>
+                    </li>
+                    <li><a href="../Subbab2/perkalian2_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a href="../Subbab3/perkalian3_1.html">Pecahan Campuran <br> dengan Pecahan
+                            Biasa</a></li>
+                    <li><a href="../Kuis1/kuis1.html">Kuis</a></li>
+                </ul>
+            </li>
+            <li class="showMenu">
+                <div class="menu-active">
+                    <a href="../Subbab4/pembagian4_1.html">
+                        <i class='uil uil-calculator'></i>
+                        <span class="nama_menu">Pembagian</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab4/pembagian4_1.html">Pembagian</a></li>
+                    <li><a href="../Subbab4/pembagian4_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a>
+                    </li>
+                    <li><a href="../Subbab5/pembagian5_1.html">Pecahan Biasa dengan <br>
+                            Bilangan Asli</a>
+                    </li>
+                    <li><a href="../Subbab6/pembagian6_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a class="sub_menu_active" href="pembagian7_1.html">Pecahan Campuran <br> dengan Bilangan
+                            Asli</a></li>
+                    <li><a href="../Kuis2/kuis2.html">Kuis</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../Evaluasi/evaluasi.html">
+                    <i class='uil uil-comments'></i>
+                    <span class="nama_menu">Evaluasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="../Evaluasi/evaluasi.html">Evaluasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="name-job">
+                        <div class="profile_name" id="userlink">Memuat...</div>
+                        <span style="font-size: 0.75rem; color: #94a3b8;">Akses Siswa</span>
+                    </div>
+                    <i class='bx bx-log-out' id="btn-logout" title="Keluar"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">Latihan Pembagian Pecahan Campuran dengan Bilangan Asli</span>
+                </div>
+            </div>
+        </nav>
+
+        <!--Awal Konten -->
+        <div class="konten">
+            <!-- Awal Konten -->
+            <div class="inti-materi">
+                <div class="text-center mb-4">
+                    <img src="/img/AyoMencoba.png" alt="Ayo Mencoba" style="max-width: 200px;">
+                </div>
+                <div class="card border-dark mb-3 mx-4" id="card-contoh">
+                    <div class="card-header bg-primary-subtle fw-semibold">
+                        <i class='bx bx-pencil me-1'></i> Soal Menggunakan Langkah-langkah
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <!-- Soal Langkah 1 -->
+                            <div class="row justify-content-around mt-2">
+                                <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+                                    <table class="fs-4">
+                                        <tr>
+                                            <td rowspan="2">\(1\frac{1}{2} : 3 =\) </td>
+                                            <td><input id="pembilang1" class="pembilang" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebut1" class="penyebut" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- Column Langkah -->
+                                <div class="col-12 col-md-8 text-center" style="min-width: 0;">
+                                    <div class="table-responsive">
+                                    <table class="fs-4 mx-auto text-nowrap">
+                                        <tr>
+                                            <td>\(1\frac{1}{2} : 3=\)</td>
+                                            <td><input id="pembilang2" class="pembilang text-center" placeholder="..."
+                                                    type="text" size="1">
+                                                <br>
+                                                <input id="penyebut2" class="penyebut text-center" placeholder="..."
+                                                    type="text" size="1">
+                                            </td>
+                                            <td>&nbsp; : &nbsp;</td>
+                                            <td><input id="asli1" class="asli text-center" placeholder="..." type="text"
+                                                    size="1"></td>
+                                            <td>&nbsp;=&nbsp;</td>
+                                            <td><input id="pembilang3" class="pembilang text-center" placeholder="..."
+                                                    type="text" size="1">
+                                                <br>
+                                                <input id="penyebut3" class="penyebut text-center" placeholder="..."
+                                                    type="text" size="1">
+                                            </td>
+                                            <td>&nbsp; : &nbsp;</td>
+                                            <td><input id="pembilang4" class="pembilang text-center" placeholder="..."
+                                                    type="text" size="1">
+                                                <br>
+                                                <input id="penyebut4" class="penyebut text-center" placeholder="..."
+                                                    type="text" size="1">
+                                            </td>
+                                            <td>&nbsp;=&nbsp;</td>
+                                            <td><input id="pembilang5" class="pembilang text-center" placeholder="..."
+                                                    type="text" size="1">
+                                                <br>
+                                                <input id="penyebut5" class="penyebut text-center" placeholder="..."
+                                                    type="text" size="1">
+                                            </td>
+                                            <td>&nbsp;\(\times\)&nbsp;</td>
+                                            <td><input id="pembilang6" class="pembilang text-center" placeholder="..."
+                                                    type="text" size="1">
+                                                <br>
+                                                <input id="penyebut6" class="penyebut text-center" placeholder="..."
+                                                    type="text" size="1">
+                                            </td>
+                                            <td>&nbsp;=&nbsp;</td>
+                                            <td><input id="pembilang7" class="pembilang text-center" placeholder="..."
+                                                    type="text" size="1">
+                                                <br>
+                                                <input id="penyebut7" class="penyebut text-center" placeholder="..."
+                                                    type="text" size="1">
+                                            </td>
+                                            <td>&nbsp;=&nbsp;</td>
+                                            <td><input id="pembilang8" class="pembilang text-center" placeholder="..."
+                                                    type="text" size="1">
+                                                <br>
+                                                <input id="penyebut8" class="penyebut text-center" placeholder="..."
+                                                    type="text" size="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div id="alertHasil1" class="my-2"></div>
+                                    <button id="btn1" type="button" class="btn btn-primary mt-1">Cek
+                                        Jawaban</button>
+                                </div>
+                            </div> <!-- Akhir Soal Langkah 1 -->
+                        </div>
+                    </div>
+                </div> <!-- Akhir Card Soal Menggunakan Langkah -->
+                <!-- Awal Card Soal Langsung -->
+                <div class="card border-dark mb-3 mx-4" id="card-contoh">
+                    <div class="card-header bg-primary-subtle fw-semibold">
+                        <i class='bx bx-check-square me-1'></i> Soal Langsung Jawaban Akhir
+                    </div>
+                    <div class="card-body">
+                        <div class="container">
+                            <div class="row justify-content-around">
+                                <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+                                    <table class="fs-4">
+                                        <tr>
+                                            <td rowspan="2">\(1\frac{5}{6} : 2 =\) </td>
+                                            <td><input id="pembilangs1" class="pembilang" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts1" class="penyebut" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+                                    <table class="fs-4">
+                                        <tr>
+                                            <td rowspan="2">\(4\frac{1}{2} : 6 =\) </td>
+                                            <td><input id="pembilangs2" class="pembilang" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts2" class="penyebut" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+                                    <table class="fs-4">
+                                        <tr>
+                                            <td rowspan="2">\(5\frac{4}{9} : 5 =\) </td>
+                                            <td><input id="pembilangs3" class="pembilang" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts3" class="penyebut" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row justify-content-around mt-2">
+                                <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex justify-content-center">
+                                    <table class="fs-4">
+                                        <tr>
+                                            <td rowspan="2">\(5\frac{4}{7} : 3 =\) </td>
+                                            <td><input id="pembilangs4" class="pembilang" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts4" class="penyebut" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-12 col-md-8 d-flex justify-content-center">
+                                    <table class="fs-4">
+                                        <tr>
+                                            <td rowspan="2">\(1\frac{7}{9} : 4 =\) </td>
+                                            <td><input id="pembilangs5" class="pembilang" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts5" class="penyebut" type="text" placeholder="..."
+                                                    size="1">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            <div>
+                                <div id="alertHasil2" class="my-2"></div>
+                                <button id="btn2" type="button" class="btn btn-primary mt-1">Cek
+                                    Jawaban</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Akhir Card Soal Langsung -->
+            </div> <!-- Akhir Konten -->
+
+            <!-- Awal pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center mt-4 mb-0">
+                    <li class="page-item">
+                        <a class="page-link" href="pembagian7_1.html"><i class='bx bx-chevron-left'></i> Sebelumnya</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="pembagian7_1.html">1</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="pembagian7_2.html">2</a></li>
+                    <li class="page-item"><a class="page-link" href="kesimpulan7.html">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="kesimpulan7.html">Selanjutnya <i class='bx bx-chevron-right'></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Akhir pagination -->
+        </div> <!-- Akhir Konten -->
+    </section>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- My JS -->
+    <script src="/js/script_materi.js"></script>
+    <script src="/js/database.js"></script>
+    <script src="js/pembagian7_2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector("#sidebarBtn");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <script type="module">
+        // reference
+        let userlink = document.getElementById('userlink')
+        let nama = localStorage.getItem('nama')
+
+        //Cek Login
+        if (localStorage.getItem('loggedIn')) {
+            // Pengguna telah login, biarkan akses ke konten beranda
+        } else {
+            // Pengguna belum login, redirect ke halaman login atau tampilkan pesan login
+            window.location = "/index.html"; // Ganti dengan halaman login yang sesuai
+
+            // Atau tampilkan pesan login
+            // const loginMessage = document.createElement('p');
+            // loginMessage.textContent = "Anda harus login untuk mengakses halaman ini.";
+            // document.body.appendChild(loginMessage);
+        }
+
+        //function
+        function getNama() {
+            if (nama == null) {
+                window.location = "/index.html";
+                console.log("kosong");
+            }
+            else {
+                userlink.innerText = nama;
+            }
+        }
+
+        getNama();
+
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Keluar dari Materi?",
+                text: "Sesi belajarmu akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    localStorage.removeItem('nama');
+                    localStorage.removeItem('loggedIn');
+                    window.location = "/index.html";
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

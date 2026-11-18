@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/guru.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Dashboard Guru | Manajemen Data Siswa</title>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Portal Guru</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='bx bx-home-alt'></i>
+                    <span class="nama_menu">Beranda Materi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda Materi</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-active">
+                    <a href="guru.html">
+                        <i class='bx bx-user-pin'></i>
+                        <span class="nama_menu">Data Siswa</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru.html">Data Siswa</a></li>
+                </ul>
+            </li>
+            <!-- MENU MANAJEMEN SOAL (BARU) -->
+            <li>
+                <a href="../manajemenSoal.html">
+                    <i class='bx bx-edit'></i>
+                    <span class="nama_menu">Manajemen Soal</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="../manajemenSoal.html">Manajemen Soal</a></li>
+                </ul>
+            </li>
+            <!-- BATAS MENU MANAJEMEN SOAL -->
+            <li>
+                <a href="kuis1.html">
+                    <i class='bx bx-abacus'></i>
+                    <span class="nama_menu">Hasil Kuis 1</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="kuis1.html">Hasil Kuis 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="kuis2.html">
+                    <i class='bx bx-calculator'></i>
+                    <span class="nama_menu">Hasil Kuis 2</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="kuis2.html">Hasil Kuis 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="evaluasi.html">
+                    <i class='bx bx-task'></i>
+                    <span class="nama_menu">Hasil Evaluasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="evaluasi.html">Hasil Evaluasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="rekapitulasi.html">
+                    <i class='bx bx-bar-chart-square'></i>
+                    <span class="nama_menu">Rekapitulasi Akhir</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="rekapitulasi.html">Rekapitulasi Akhir</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Profile Footer -->
+        <div class="profile-details">
+            <div class="name-job">
+                <div class="profile_name" id="userlink">Memuat Nama...</div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Akses Pengajar</span>
+            </div>
+            <i class='bx bx-log-out' id="btn-logout" title="Keluar dari Dashboard"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="home-section">
+        <!-- Top Navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">Manajemen Data Siswa</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Konten Inti -->
+        <div class="konten">
+            <div class="inti-materi">
+                <!-- Header Title -->
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h4 class="fw-bold mb-1" style="color: #0f172a;">Daftar Akun Siswa</h4>
+                        <p class="text-muted mb-0" style="font-size: 0.9rem;">Kelola data login dan kredensial siswa yang terdaftar dalam sistem.</p>
+                    </div>
+                </div>
+
+                <!-- Modal Update -->
+                <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="staticBackdropLabel">Perbarui Data Siswa</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="popup update active">
+                                    <form action="#">
+                                        <div>
+                                            <label class="form-label fw-semibold text-muted" style="font-size: 0.85rem;">Nama Lengkap</label>
+                                            <input type="text" placeholder="Masukkan nama lengkap" name="nama" autocomplete="off">
+                                        </div>
+                                        <div>
+                                            <label class="form-label fw-semibold text-muted" style="font-size: 0.85rem;">Username</label>
+                                            <input type="text" placeholder="Masukkan username" name="username" autocomplete="off">
+                                        </div>
+                                        <div>
+                                            <label class="form-label fw-semibold text-muted" style="font-size: 0.85rem;">Password</label>
+                                            <input type="text" placeholder="Masukkan password baru" name="password" autocomplete="off">
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">Batal</button>
+                                            <button type="submit" id="submit2" class="btn btn-primary">
+                                                <i class='bx bx-save me-1'></i> Simpan Perubahan
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabel Data Siswa -->
+                <div class="table-responsive">
+                    <table id="datasiswa" class="table table-hover align-middle" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th width="30%">Nama Siswa</th>
+                                <th width="25%">Username</th>
+                                <th width="25%">Password</th>
+                                <th width="20%" class="text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <!-- Data Firebase masuk ke sini -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector("#sidebarBtn");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <!-- Auth Script -->
+    <script type="module">
+        let userlink = document.getElementById('userlink');
+        let nama = sessionStorage.getItem('nama');
+
+        function getNama() {
+            if (nama == null) {
+                window.location = "/loginGuru.html";
+            } else {
+                userlink.innerText = nama;
+            }
+        }
+
+        getNama();
+
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Keluar Dashboard?",
+                text: "Sesi Anda sebagai pengajar akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    sessionStorage.removeItem('nama');
+                    window.location = "/loginGuru.html";
+                }
+            });
+        });
+    </script>
+
+    <!-- Firebase & DataTabel Script -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, child, get, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCb8S9cTRe1Qppb2r0rqz3xA5vIL1wZrtI",
+            authDomain: "ta-media.firebaseapp.com",
+            databaseURL: "https://ta-media-default-rtdb.firebaseio.com",
+            projectId: "ta-media",
+            storageBucket: "ta-media.appspot.com",
+            messagingSenderId: "20586336998",
+            appId: "1:20586336998:web:f73665ad8ddf9e183ce127"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+        const usersRef = ref(db, 'Users/');
+        var tbody = document.querySelector('#tbody');
+        var updateform = document.querySelector(".update form");
+
+        let dataTable = null;
+
+        onValue(usersRef, (snapshot) => {
+            const users = snapshot.val();
+            tbody.innerHTML = "";
+
+            for (let user in users) {
+                let tr = `
+                <tr data-id="${user}">
+                    <td class="fw-medium">${users[user].nama}</td>
+                    <td><span class="badge bg-light text-dark border">${users[user].username}</span></td>
+                    <td><span class="text-muted">****</span></td>
+                    <td class="text-center">
+                        <button class="edit btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            <i class='bx bx-edit-alt'></i> Edit
+                        </button>
+                        <button class="delete btn btn-danger btn-sm ms-1">
+                            <i class='bx bx-trash'></i> Hapus
+                        </button>
+                    </td>
+                </tr>`;
+                tbody.innerHTML += tr;
+            }
+
+            // Edit Listener
+            let editButtons = document.querySelectorAll(".edit");
+            editButtons.forEach(edit => {
+                edit.addEventListener("click", () => {
+                    let userId = edit.parentElement.parentElement.dataset.id;
+                    get(child(ref(db), `Users/${userId}`)).then((snapshot) => {
+                        updateform.nama.value = snapshot.val().nama;
+                        updateform.username.value = snapshot.val().username;
+                        updateform.password.value = snapshot.val().password;
+                    });
+
+                    // Override submit to update this specific user
+                    updateform.onsubmit = (e) => {
+                        e.preventDefault();
+                        update(ref(db, `Users/${userId}`), {
+                            nama: updateform.nama.value,
+                            username: updateform.username.value,
+                            password: updateform.password.value,
+                        }).then(() => {
+                            swal("Data Diperbarui!", "Informasi kredensial siswa berhasil diubah.", "success").then(() => {
+                                updateform.reset();
+                                document.querySelector(".btn-close").click();
+                            });
+                        }).catch(() => {
+                            swal("Gagal", "Terjadi kesalahan saat memperbarui data.", "error");
+                        });
+                    };
+                });
+            });
+
+            // Delete Listener
+            let deleteButtons = document.querySelectorAll(".delete");
+            deleteButtons.forEach(deleteBtn => {
+                deleteBtn.addEventListener("click", () => {
+                    swal({
+                        title: "Hapus Akun Siswa?",
+                        text: "Akun siswa beserta data yang ditautkan akan dihapus permanen.",
+                        icon: "warning",
+                        buttons: ["Batal", "Ya, Hapus"],
+                        dangerMode: true,
+                    }).then((willDelete) => {
+                        if (willDelete) {
+                            let userId = deleteBtn.parentElement.parentElement.dataset.id;
+                            remove(ref(db, 'Users/' + userId));
+                            swal("Berhasil Dihapus", "Akun siswa telah dihapus dari sistem.", "success");
+                        }
+                    });
+                });
+            });
+
+            // Initialize/Update DataTable
+            if (dataTable === null) {
+                dataTable = $('#datasiswa').DataTable({
+                    language: {
+                        url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/id.json',
+                        search: "Cari Siswa:",
+                        lengthMenu: "Tampilkan _MENU_ siswa"
+                    }
+                });
+            } else {
+                dataTable.clear().rows.add($(tbody).find('tr')).draw();
+            }
+        });
+    </script>
+</body>
+
+</html>

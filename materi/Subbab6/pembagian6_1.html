@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/css/style_materi.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <title>Pembagian Dua Pecahan Biasa | Materi Siswa</title>
+</head>
+
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Menu Materi</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='uil uil-estate'></i>
+                    <span class="nama_menu">Beranda</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu">
+                    <a href="../Subbab1/perkalian1_1.html">
+                        <i class='uil uil-abacus'></i>
+                        <span class="nama_menu">Perkalian</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab1/perkalian1_1.html">Perkalian</a></li>
+                    <li><a href="../Subbab1/perkalian1_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a>
+                    </li>
+                    <li><a href="../Subbab2/perkalian2_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a href="../Subbab3/perkalian3_1.html">Pecahan Campuran <br> dengan Pecahan
+                            Biasa</a></li>
+                    <li><a href="../Kuis1/kuis1.html">Kuis</a></li>
+                </ul>
+            </li>
+            <li class="showMenu">
+                <div class="menu-active">
+                    <a href="../Subbab4/pembagian4_1.html">
+                        <i class='uil uil-calculator'></i>
+                        <span class="nama_menu">Pembagian</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab4/pembagian4_1.html">Pembagian</a></li>
+                    <li><a href="../Subbab4/pembagian4_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a>
+                    </li>
+                    <li><a href="../Subbab5/pembagian5_1.html">Pecahan Biasa dengan <br>
+                            Bilangan Asli</a>
+                    </li>
+                    <li><a class="sub_menu_active" href="pembagian6_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a href="../Subbab7/pembagian7_1.html">Pecahan Campuran <br> dengan Bilangan Asli</a></li>
+                    <li><a href="../Kuis2/kuis2.html">Kuis</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../Evaluasi/evaluasi.html">
+                    <i class='uil uil-comments'></i>
+                    <span class="nama_menu">Evaluasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="../Evaluasi/evaluasi.html">Evaluasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="profile-details">
+                    <div class="name-job">
+                        <div class="profile_name" id="userlink">Memuat...</div>
+                        <span style="font-size: 0.75rem; color: #94a3b8;">Akses Siswa</span>
+                    </div>
+                    <i class='bx bx-log-out' id="btn-logout" title="Keluar"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <section class="home-section">
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">Pembagian Dua Pecahan Biasa</span>
+                </div>
+            </div>
+        </nav>
+
+        <!--Awal Konten -->
+        <div class="konten">
+            <!-- Awal Ini Materi -->
+            <div class="inti-materi">
+                <div class="accordion shadow-sm mb-4" id="accordionTujuan">
+                    <div class="accordion-item border-0 rounded-3 overflow-hidden">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTujuan" aria-expanded="true" aria-controls="collapseTujuan">
+                                <i class='bx bx-target-lock me-2 fs-5'></i> Tujuan Pembelajaran
+                            </button>
+                        </h2>
+                        <div id="collapseTujuan" class="accordion-collapse collapse show" data-bs-parent="#accordionTujuan">
+                            <div class="accordion-body bg-light">
+                                <ul class="list-group list-group-flush bg-transparent">
+                                    <li class="list-group-item bg-transparent border-0 py-1">
+                                        <i class='bx bx-check-circle text-success me-2'></i> Memahami arti dari (pecahan biasa) dibagi (pecahan biasa).
+                                    </li>
+                                    <li class="list-group-item bg-transparent border-0 py-1">
+                                        <i class='bx bx-check-circle text-success me-2'></i> Mengetahui cara menghitung (pecahan biasa) dibagi (pecahan biasa).
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mb-4">
+                    <img src="/img/AyoMengamati.png" alt="Ayo Mengamati" style="max-width: 200px;">
+                </div>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Contoh 1
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h4>\(\frac{3}{4} : \frac{1}{8} = \frac{...}{...} \)</h4>
+                                <div class="card border-dark mx-4" id="card-contoh">
+                                    <div class="card-header">
+                                        Penyelesaian :
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="fs-5">Berapa bagian masing-masing gambar yang berwarna
+                                                        dibawah ini!
+                                                    <table class="fs-4 mb-4">
+                                                        <tr>
+                                                            <td><img src="img/gambar1.png" alt="Contoh 1"
+                                                                    class="gambarPembilang img-fluid" width="250">
+                                                            </td>
+                                                            <td>
+                                                                =
+                                                            </td>
+                                                            <td><input id="pembilang1" class="pembilang text-center"
+                                                                    placeholder="..." type="text" size="1">
+                                                                <br>
+                                                                <input id="penyebut1" class="penyebut text-center"
+                                                                    placeholder="..." type="text" size="1">
+                                                            </td>
+                                                            <td id="text1" rowspan="2">Atau bisa
+                                                                dituliskan
+                                                                seperti
+                                                                ini <strong>\(\frac{\frac{3}{4}}{\frac{1}{8}}\)</strong>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="img/gambar2.png" alt="Contoh 1"
+                                                                    class="gambarPenyebut img-fluid" width="250">
+                                                            </td>
+                                                            <td>
+                                                                =
+                                                            </td>
+                                                            <td><input id="pembilang2" class="pembilang text-center"
+                                                                    placeholder="..." type="text" size="1">
+                                                                <br>
+                                                                <input id="penyebut2" class="penyebut text-center"
+                                                                    placeholder="..." type="text" size="1">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div id="alertHasil1"></div>
+                                            <button id="btn1" type="button" class="btn btn-primary mt-1">Cek
+                                                Jawaban</button>
+                                            <button id="btn2" type="button"
+                                                class="btn btn-primary mt-1">Lanjutkan</button>
+
+                                            <div id="text2" class="mt-2 fs-5">
+                                                <p>Kemudian, ambil \(\frac{1}{8}\) bagian dari \(\frac{3}{4}\). Begitu
+                                                    juga sebaliknya ambil \(\frac{3}{4}\) bagian dari \(\frac{1}{8}\)
+                                                </p>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <p class="fs-5"><em>Hitunglah jumlah kotak yang berwarna
+                                                                masing-masing
+                                                                bagian.</em></p>
+                                                        <table class="fs-4 mb-4">
+                                                            <tr>
+                                                                <td><img src="img/animasi1.gif" alt="Contoh 1"
+                                                                        class="gambarPembilang img-fluid" width="400">
+                                                                </td>
+                                                                <td>
+                                                                    =
+                                                                </td>
+                                                                <td><input id="jawaban1" class="asli text-center"
+                                                                        placeholder="..." type="text" size="1">
+                                                                </td>
+                                                                <td><img id="gambarHasil1" src="img/gambar3.png"
+                                                                        alt="Hasil 1"
+                                                                        class="gambarPembilang img-fluid mt-5"
+                                                                        width="300">
+                                                                </td>
+                                                                <td id="text3" rowspan="2" class="fs-2">=
+                                                                    \(\frac{24}{4}\)</td>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><img src="img/animasi2.gif" alt="Contoh 1"
+                                                                        class="gambarPenyebut img-fluid" width="400">
+                                                                </td>
+                                                                <td>
+                                                                    =
+                                                                </td>
+                                                                <td><input id="jawaban2" class="asli text-center"
+                                                                        placeholder="..." type="text" size="1">
+                                                                </td>
+                                                                <td>
+                                                                    <img id="gambarHasil2" src="img/gambar4.png"
+                                                                        alt="Hasil 2"
+                                                                        class="gambarPenyebut img-fluid mb-5"
+                                                                        width="300">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div id="alertHasil2"></div>
+                                                <button id="btn3" type="button" class="btn btn-primary mt-1">Cek
+                                                    Jawaban</button>
+                                                <button id="btn4" type="button"
+                                                    class="btn btn-primary mt-1">Lanjut</button>
+
+                                                <div id="text4">
+                                                    <p class="fs-4">Maka, \(\frac{3}{4} : \frac{1}{8} = \frac{24}{4}\)
+                                                        atau <input id="jawaban3" class="asli text-center"
+                                                            placeholder="..." type="text" size="1">
+                                                    </p>
+                                                    <div id="alertHasil3"></div>
+                                                    <button id="btn5" type="button" class="btn btn-primary mt-1">Cek
+                                                        Jawaban</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                Contoh 2
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h4>\(\frac{3}{4} : \frac{1}{2} = \frac{...}{...} \)</h4>
+                            </div>
+                            <div class="card border-dark mx-4" id="card-contoh">
+                                <div class="card-header">
+                                    Penyelesaian :
+                                </div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="fs-5">Berapa bagian masing-masing gambar yang berwarna
+                                                    dibawah ini!
+                                                <table class="fs-4 mb-4">
+                                                    <tr>
+                                                        <td><img src="img/gambarc21.png" alt="Contoh 1"
+                                                                class="gambarPembilang img-fluid" width="250">
+                                                        </td>
+                                                        <td>
+                                                            =
+                                                        </td>
+                                                        <td><input id="pembilang21" class="pembilang text-center"
+                                                                placeholder="..." type="text" size="1">
+                                                            <br>
+                                                            <input id="penyebut21" class="penyebut text-center"
+                                                                placeholder="..." type="text" size="1">
+                                                        </td>
+                                                        <td id="text21" rowspan="2">Atau bisa
+                                                            dituliskan
+                                                            seperti
+                                                            ini <strong>\(\frac{\frac{3}{4}}{\frac{1}{2}}\)</strong>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><img src="img/gambarc22.png" alt="Contoh 1"
+                                                                class="gambarPenyebut img-fluid" width="250">
+                                                        </td>
+                                                        <td>
+                                                            =
+                                                        </td>
+                                                        <td><input id="pembilang22" class="pembilang text-center"
+                                                                placeholder="..." type="text" size="1">
+                                                            <br>
+                                                            <input id="penyebut22" class="penyebut text-center"
+                                                                placeholder="..." type="text" size="1">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        <div id="alertHasil21"></div>
+                                        <button id="btn21" type="button" class="btn btn-primary mt-1">Cek
+                                            Jawaban</button>
+                                        <button id="btn22" type="button" class="btn btn-primary mt-1">Lanjutkan</button>
+
+                                        <div id="text22" class="mt-2 fs-5">
+                                            <p>Kemudian, ambil \(\frac{1}{2}\) bagian dari \(\frac{3}{4}\). Begitu
+                                                juga sebaliknya ambil \(\frac{3}{4}\) bagian dari \(\frac{1}{2}\)
+                                            </p>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <p class="fs-5"><em>Hitunglah jumlah kotak yang berwarna
+                                                            masing-masing
+                                                            bagian.</em></p>
+                                                    <table class="fs-4 mb-4">
+                                                        <tr>
+                                                            <td><img src="img/animasi3.gif" alt="Contoh 1"
+                                                                    class="gambarPembilang img-fluid" width="400">
+                                                            </td>
+                                                            <td>
+                                                                =
+                                                            </td>
+                                                            <td><input id="jawaban21" class="asli text-center"
+                                                                    placeholder="..." type="text" size="1">
+                                                            </td>
+                                                            <td><img id="gambarHasil21" src="img/gambarc23.png"
+                                                                    alt="Hasil 1" class="gambarPembilang img-fluid mt-5"
+                                                                    width="300">
+                                                            </td>
+                                                            <td id="text23" rowspan="2" class="fs-2">=
+                                                                \(\frac{6}{4}\)</td>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><img src="img/animasi4.gif" alt="Contoh 1"
+                                                                    class="gambarPenyebut img-fluid" width="400">
+                                                            </td>
+                                                            <td>
+                                                                =
+                                                            </td>
+                                                            <td><input id="jawaban22" class="asli text-center"
+                                                                    placeholder="..." type="text" size="1">
+                                                            </td>
+                                                            <td>
+                                                                <img id="gambarHasil22" src="img/gambarc24.png"
+                                                                    alt="Hasil 2" class="gambarPenyebut img-fluid mb-5"
+                                                                    width="300">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div id="alertHasil22"></div>
+                                            <button id="btn23" type="button" class="btn btn-primary mt-1">Cek
+                                                Jawaban</button>
+                                            <button id="btn24" type="button"
+                                                class="btn btn-primary mt-1">Lanjut</button>
+
+                                            <div id="text24">
+                                                <table class="fs-4 mb-4">
+                                                    <tr>
+                                                        <td rowspan="2">Maka, \(\frac{3}{4} : \frac{1}{2} =
+                                                            \frac{6}{4} = \)
+                                                        </td>
+                                                        <td id="textAkhir2" rowspan="2">\(\frac{3 \times 2}{4 \times
+                                                            1} = \frac{3}{2}
+                                                            \times
+                                                            \frac{4}{1} = \)
+                                                        </td>
+                                                        <td rowspan="2"><input id="jawaban23" class="asli text-center"
+                                                                placeholder="..." type="text" size="1">
+                                                        </td>
+                                                        <td>
+                                                            <input id="pembilang23" class="pembilang text-center"
+                                                                placeholder="..." type="text" size="1">
+                                                            <br>
+                                                            <input id="penyebut23" class="penyebut text-center"
+                                                                placeholder="..." type="text" size="1">
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                                <div id="alertHasil23"></div>
+                                                <button id="btn25" type="button" class="btn btn-primary mt-1">Cek
+                                                    Jawaban</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Akhir Contoh Accrodion -->
+            </div> <!-- Akhir Inti Materi -->
+        </div> <!-- Akhir Konten -->
+        <!-- Awal pagination -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center mt-4 mb-0">
+                <li class="page-item">
+                    <a class="page-link" href="../Subbab5/kesimpulan5.html"><i class='bx bx-chevron-left'></i> Sebelumnya</a>
+                </li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="pembagian6_1.html">1</a></li>
+                <li class="page-item"><a class="page-link" href="pembagian6_2.html">2</a></li>
+                <li class="page-item"><a class="page-link" href="kesimpulan6.html">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="pembagian6_2.html">Selanjutnya <i class='bx bx-chevron-right'></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Akhir pagination -->
+    </section>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- My JS -->
+    <script src="/js/script_materi.js"></script>
+    <script src="/js/database.js"></script>
+    <script src="js/pembagian6_1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector("#sidebarBtn");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <script type="module">
+        // reference
+        let userlink = document.getElementById('userlink')
+        let nama = localStorage.getItem('nama')
+
+        //Cek Login
+        if (localStorage.getItem('loggedIn')) {
+            // Pengguna telah login, biarkan akses ke konten beranda
+        } else {
+            // Pengguna belum login, redirect ke halaman login atau tampilkan pesan login
+            window.location = "/index.html"; // Ganti dengan halaman login yang sesuai
+
+            // Atau tampilkan pesan login
+            // const loginMessage = document.createElement('p');
+            // loginMessage.textContent = "Anda harus login untuk mengakses halaman ini.";
+            // document.body.appendChild(loginMessage);
+        }
+
+        //function
+        function getNama() {
+            if (nama == null) {
+                window.location = "/index.html";
+                console.log("kosong");
+            }
+            else {
+                userlink.innerText = nama;
+            }
+        }
+
+        getNama();
+
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Keluar dari Materi?",
+                text: "Sesi belajarmu akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    localStorage.removeItem('nama');
+                    localStorage.removeItem('loggedIn');
+                    window.location = "/index.html";
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

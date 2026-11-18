@@ -1,0 +1,209 @@
+/* CSS GLOBAL MATERI KHUSUS KONTEN (Pecahan) */
+
+/* Styling Accordion untuk Tujuan Pembelajaran & Contoh */
+.accordion-item {
+    border-radius: 12px !important;
+    border: 1px solid var(--border-color) !important;
+    margin-bottom: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.accordion-button {
+    font-weight: 700 !important;
+    color: var(--text-main) !important;
+    background-color: #f1f5f9 !important;
+    padding: 1rem 1.25rem;
+    box-shadow: none !important;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-light) !important;
+    color: var(--primary-dark) !important;
+}
+
+.accordion-button.bg-primary {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+.accordion-button.bg-primary:not(.collapsed) {
+    background-color: var(--primary-dark) !important;
+    color: #ffffff !important;
+}
+
+.accordion-button.bg-primary-subtle {
+    background-color: #e0e7ff !important;
+    color: #3730a3 !important;
+}
+
+.accordion-body {
+    padding: 1.25rem;
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.7;
+}
+
+.accordion-body p {
+    margin-bottom: 1rem;
+}
+
+.accordion-body ul {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+}
+
+.accordion-body li {
+    margin-bottom: 6px;
+}
+
+/* Card untuk Contoh Soal */
+#card-contoh {
+    border: 2px dashed #cbd5e1;
+    border-radius: 16px;
+    margin-top: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    background: #ffffff;
+}
+
+#card-contoh .card-header {
+    background-color: #f8fafc;
+    border-bottom: 2px dashed #cbd5e1;
+    font-weight: 700;
+    color: var(--text-main);
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+#card-contoh .card-body {
+    padding: 20px;
+}
+
+/* Tabel Input Pecahan */
+table.fs-3, table.fs-4 {
+    margin: 0 auto;
+    color: var(--text-main);
+}
+
+table.fs-3 td, table.fs-4 td {
+    padding: 0 8px;
+    vertical-align: middle;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-main);
+    border-bottom: 3px solid var(--primary);
+    padding-bottom: 12px;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* Input fields (Pembilang, Penyebut, Asli) */
+.pembilang, .penyebut, .asli, #jawaban {
+    border: none;
+    text-align: center;
+    width: 48px;
+    height: 38px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background-color: #f1f5f9;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.pembilang {
+    border-bottom: 2px solid var(--text-main);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 4px;
+}
+
+.penyebut {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+input:focus {
+    background-color: #e0f2fe;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+/* Hasil Validasi (Warna) */
+.jawabpecahanbenar {
+    border: 2px solid #10b981 !important;
+    background-color: #d1fae5 !important;
+    color: #047857;
+}
+
+.jawabpecahansalah {
+    border: 2px solid #ef4444 !important;
+    background-color: #fee2e2 !important;
+    color: #b91c1c;
+}
+
+/* Gambar Materi */
+img.img-fluid {
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+/* Tombol Penjelasan Bertahap (Multi-collapse) */
+.tombol-contoh {
+    margin-top: 1.5rem;
+}
+
+.tombol-contoh .btn {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 8px 16px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.multi-collapse .card {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    margin-top: 10px;
+    height: 100%;
+}
+
+.multi-collapse .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 16px;
+}
+
+.multi-collapse img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+/* Notifikasi Alert Hasil */
+#alertHasil1, #alertHasil2, #alertHasil3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Tabel Bootstrap override di dalam soal */
+.table-primary {
+    --bs-table-bg: #eff6ff;
+    --bs-table-border-color: #bfdbfe;
+}
+
+.table-primary th {
+    color: #1e3a8a;
+}

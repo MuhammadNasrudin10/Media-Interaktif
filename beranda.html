@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang='id'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='theme-color' content='#1e3a8a'>
+    <title>Beranda | Media Pembelajaran Bilangan Pecahan</title>
+    <link rel='icon' type='image/png' href='img/logo.png'>
+    <link rel='preconnect' href='https://fonts.googleapis.com'>
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link href='https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap' rel='stylesheet'>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+<body>
+    <div class='bg-shapes' aria-hidden='true'>
+        <div class='shape shape-1'>&frac12; &times; &frac34;</div>
+        <div class='shape shape-2'>&frac13; &divide; &frac14;</div>
+        <div class='shape shape-3'>&frac15; &times; &frac16;</div>
+        <div class='shape shape-4'>&frac18; &divide; &frac12;</div>
+        <div class='shape shape-5'>&frac38;</div>
+    </div>
+
+    <nav class='main-navbar'>
+        <a href='beranda.html' class='brand-header'>
+            <img src='img/logo.png' alt='Logo Media Pembelajaran' class='brand-logo'>
+            <div class='brand-title'>
+                <span class='main-title'>Matematika Pecahan SD</span>
+                <span class='sub-title'>Media Pembelajaran Interaktif Kelas V Vol. 2</span>
+            </div>
+        </a>
+        <div class='role-switcher'>
+            <button class='role-btn active' type='button' aria-selected='true'>
+                <i class='bx bxs-graduation'></i><span>Portal Siswa</span>
+            </button>
+            <button class='role-btn' type='button' id='btnPortalGuru'>
+                <i class='bx bxs-chalkboard'></i><span>Portal Guru</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class='home-main'>
+        <section class='welcome-section'>
+            <div class='welcome-content'>
+                <span class='welcome-badge'><i class='bx bxs-star'></i> E-Learning Matematika Kelas 5 SD</span>
+                <p class='welcome-eyebrow'>SELAMAT DATANG DI MEDIA PEMBELAJARAN</p>
+                <h1>Halo, <span id='studentName'>Siswa Hebat</span>!<br>Mari Belajar Pecahan dengan Seru.</h1>
+                <p class='welcome-desc'>Jelajahi dunia matematika melalui pembelajaran interaktif. Pelajari perkalian dan pembagian bilangan pecahan dengan cara yang lebih mudah, menyenangkan, dan menarik.</p>
+                <div class='welcome-highlights'>
+                    <span><i class='bx bx-book-open'></i> Materi Interaktif</span>
+                    <span><i class='bx bx-bulb'></i> Belajar Bertahap</span>
+                    <span><i class='bx bx-trophy'></i> Asah Kemampuan</span>
+                </div>
+            </div>
+            <div class='welcome-illustration' aria-hidden='true'>
+                <div class='illustration-glow'></div>
+                <div class='illustration-circle circle-one'>&frac12;</div>
+                <div class='illustration-circle circle-two'>&frac34;</div>
+                <div class='illustration-circle circle-three'>&frac13;</div>
+                <div class='book-illustration'><img src='img/buku.png' alt=''></div>
+                <div class='illustration-caption'><i class='bx bxs-graduation'></i> Belajar &bull; Berlatih &bull; Berprestasi</div>
+            </div>
+        </section>
+
+        <section class='menu-section' id='menu'>
+            <div class='section-heading'>
+                <div>
+                    <span class='section-eyebrow'>MULAI PERJALANAN BELAJARMU</span>
+                    <h2>Pilih Menu Pembelajaran</h2>
+                    <p>Semua menu tersedia dalam satu halaman. Klik untuk membuka.</p>
+                </div>
+                <div class='section-decoration'><i class='bx bx-grid-alt'></i></div>
+            </div>
+
+            <div class='menu-grid'>
+                <button type='button' class='menu-card' data-modal-target='modalInformasi'>
+                    <div class='menu-card-top'><span class='menu-number'>01</span><span class='menu-icon'><i class='bx bx-info-circle'></i></span></div>
+                    <div class='menu-image-wrap'><img src='img/informasi.png' alt='Ilustrasi informasi' class='menu-img'></div>
+                    <div class='menu-card-content'>
+                        <span class='menu-category'>KENALI MEDIA</span>
+                        <h3>Informasi</h3>
+                        <p>Info aplikasi dan petunjuk penggunaan media pembelajaran.</p>
+                        <span class='menu-action'>Buka informasi <i class='bx bx-right-arrow-alt'></i></span>
+                    </div>
+                </button>
+
+                <button type='button' class='menu-card' data-modal-target='modalTujuan'>
+                    <div class='menu-card-top'><span class='menu-number'>02</span><span class='menu-icon'><i class='bx bx-target-lock'></i></span></div>
+                    <div class='menu-image-wrap'><img src='img/tujuan.png' alt='Ilustrasi tujuan pembelajaran' class='menu-img'></div>
+                    <div class='menu-card-content'>
+                        <span class='menu-category'>CAPAIAN BELAJAR</span>
+                        <h3>Tujuan Pembelajaran</h3>
+                        <p>Kompetensi dan tujuan yang akan dicapai setelah belajar.</p>
+                        <span class='menu-action'>Lihat tujuan <i class='bx bx-right-arrow-alt'></i></span>
+                    </div>
+                </button>
+
+                <a href='materi/Subbab1/perkalian1_1.html' class='menu-card'>
+                    <div class='menu-card-top'><span class='menu-number'>03</span><span class='menu-icon'><i class='bx bx-book-open'></i></span></div>
+                    <div class='menu-image-wrap'><img src='img/buku.png' alt='Ilustrasi buku materi' class='menu-img'></div>
+                    <div class='menu-card-content'>
+                        <span class='menu-category'>SAATNYA BELAJAR</span>
+                        <h3>Materi</h3>
+                        <p>Pelajari perkalian dan pembagian bilangan pecahan secara interaktif.</p>
+                        <span class='menu-action'>Mulai belajar <i class='bx bx-right-arrow-alt'></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Informasi -->
+    <div class='modal-overlay' id='modalInformasi' aria-hidden='true'>
+        <div class='modal-card' role='dialog' aria-modal='true' aria-labelledby='titleInformasi'>
+            <div class='modal-head'>
+                <div class='modal-head-text'>
+                    <span class='role-tag'><i class='bx bx-info-circle'></i> Kenali Media</span>
+                    <h3 id='titleInformasi'>Informasi</h3>
+                </div>
+                <button type='button' class='modal-close' data-modal-close aria-label='Tutup'><i class='bx bx-x'></i></button>
+            </div>
+            <div class='panel-tabs' role='tablist'>
+                <button type='button' class='panel-tab active' data-panel='infoApp'>Info Aplikasi</button>
+                <button type='button' class='panel-tab' data-panel='petunjukApp'>Petunjuk Aplikasi</button>
+            </div>
+            <div class='modal-body'>
+                <div class='panel' id='infoApp'>
+                    <p class='panel-lead'>Media Pembelajaran ini dibuat untuk memenuhi persyaratan dalam menyelesaikan Program Strata-1 Pendidikan Komputer dengan judul:</p>
+                    <p class='panel-thesis'>Pengembangan Media Pembelajaran Interaktif Berbasis Web pada Topik Perkalian dan Pembagian Pecahan dengan Metode Drill and Practice</p>
+                    <div class='info-table-wrap'>
+                        <table class='info-table'>
+                            <tbody>
+                                <tr><td>Nama</td><td>Muhammad Nasrudin</td></tr>
+                                <tr><td>Email</td><td>muhammadnasrudin21@gmail.com</td></tr>
+                                <tr><td>Dosen Pembimbing 1</td><td>Dr. R. Ati Sukmawati, M.Kom.</td></tr>
+                                <tr><td>Dosen Pembimbing 2</td><td>Delsika Pramata Sari, M.Pd</td></tr>
+                                <tr><td>Program Studi</td><td>S1 Pendidikan Komputer</td></tr>
+                                <tr><td>Fakultas</td><td>Keguruan dan Ilmu Pendidikan</td></tr>
+                                <tr><td>Instansi</td><td>Universitas Lambung Mangkurat</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class='panel-note'>Banjarmasin, April 2023</p>
+                </div>
+                <div class='panel' id='petunjukApp' hidden>
+                    <div class='guide-grid'>
+                        <div class='guide-card'>
+                            <div class='guide-card-icon'><i class='bx bx-desktop'></i></div>
+                            <h4>Ukuran Layar Browser</h4>
+                            <p>Gunakan ukuran browser yang tepat agar seluruh navigasi terlihat. Bandingkan tampilan berikut.</p>
+                            <div class='guide-img-row'>
+                                <figure><img src='img/browserSalah.png' alt='Ukuran browser kurang tepat'><figcaption>Kurang Tepat</figcaption></figure>
+                                <figure><img src='img/browserBenar.png' alt='Ukuran browser tepat'><figcaption>Tepat</figcaption></figure>
+                            </div>
+                        </div>
+                        <div class='guide-card'>
+                            <div class='guide-card-icon'><i class='bx bx-sidebar'></i></div>
+                            <h4>Navigasi Sidebar</h4>
+                            <p>Sidebar di kiri berisi judul subbab, kuis, dan evaluasi. Klik subbab yang diinginkan untuk berpindah.</p>
+                            <img src='img/1.png' alt='Sidebar navigasi' class='guide-img'>
+                        </div>
+                        <div class='guide-card'>
+                            <div class='guide-card-icon'><i class='bx bx-book-content'></i></div>
+                            <h4>Materi Pembelajaran</h4>
+                            <p>Bagian materi berisi tujuan pembelajaran, contoh, latihan, dan kesimpulan.</p>
+                            <img src='img/2.png' alt='Materi pembelajaran' class='guide-img'>
+                        </div>
+                        <div class='guide-card'>
+                            <div class='guide-card-icon'><i class='bx bx-left-right-arrow-circle'></i></div>
+                            <h4>Navigasi Halaman</h4>
+                            <p>Navigasi linear di bawah materi untuk berpindah ke halaman sebelumnya atau selanjutnya.</p>
+                            <img src='img/3.png' alt='Navigasi halaman' class='guide-img'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Tujuan -->
+    <div class='modal-overlay' id='modalTujuan' aria-hidden='true'>
+        <div class='modal-card' role='dialog' aria-modal='true' aria-labelledby='titleTujuan'>
+            <div class='modal-head'>
+                <div class='modal-head-text'>
+                    <span class='role-tag'><i class='bx bx-target-lock'></i> Capaian Belajar</span>
+                    <h3 id='titleTujuan'>Tujuan Pembelajaran</h3>
+                </div>
+                <button type='button' class='modal-close' data-modal-close aria-label='Tutup'><i class='bx bx-x'></i></button>
+            </div>
+            <div class='panel-tabs' role='tablist'>
+                <button type='button' class='panel-tab active' data-panel='tujuanBab'>Tujuan Bab</button>
+                <button type='button' class='panel-tab' data-panel='tujuanSubbab'>Tujuan Sub Bab</button>
+            </div>
+            <div class='modal-body'>
+                <div class='panel' id='tujuanBab'>
+                    <ol class='goal-list'>
+                        <li>Memperdalam pemahaman mengenai pecahan.</li>
+                        <li>Memahami arti dari perkalian dan pembagian pecahan yang pengali dan pembaginya adalah bilangan bulat, cara menghitungnya, dan berbagai perhitungan lainnya.</li>
+                    </ol>
+                </div>
+                <div class='panel' id='tujuanSubbab' hidden>
+                    <ol class='goal-list'>
+                        <li>Memahami arti bilangan asli dikali pecahan biasa dan cara menghitungnya.</li>
+                        <li>Memahami arti pecahan biasa dikali pecahan biasa dan cara menghitungnya.</li>
+                        <li>Memahami arti pecahan campuran dikali pecahan biasa dan cara menghitungnya.</li>
+                        <li>Memahami arti bilangan asli dibagi pecahan biasa dan cara menghitungnya.</li>
+                        <li>Memahami arti pecahan biasa dibagi bilangan asli dan cara menghitungnya.</li>
+                        <li>Memahami arti pecahan biasa dibagi pecahan biasa dan cara menghitungnya.</li>
+                        <li>Memahami arti pecahan campuran dibagi bilangan asli dan cara menghitungnya.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class='home-footer'>
+        <span>&copy; Media Pembelajaran Matematika Pecahan SD</span>
+        <span>Dikembangkan oleh <a href='https://www.instagram.com/muhammad_nsrdin/' target='_blank' rel='noopener noreferrer'>Muhammad Nasrudin</a></span>
+    </footer>
+
+    <script>
+        // Cek login
+        if (localStorage.getItem('loggedIn')) {
+            const savedName = localStorage.getItem('nama');
+            if (savedName) {
+                document.getElementById('studentName').textContent = savedName;
+            }
+        } else {
+            window.location.replace('index.html');
+        }
+
+        // Portal Guru
+        document.getElementById('btnPortalGuru').addEventListener('click', function () {
+            window.location.href = 'loginGuru.html';
+        });
+
+        // Buka modal
+        document.querySelectorAll('[data-modal-target]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                const modal = document.getElementById(btn.getAttribute('data-modal-target'));
+                if (!modal) return;
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('modal-open');
+            });
+        });
+
+        // Tutup modal
+        function closeModal(modal) {
+            modal.classList.remove('open');
+            modal.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('modal-open');
+        }
+        document.querySelectorAll('.modal-overlay').forEach(function (overlay) {
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay || e.target.closest('[data-modal-close]')) {
+                    closeModal(overlay);
+                }
+            });
+        });
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay.open').forEach(closeModal);
+            }
+        });
+
+        // Tab panel di dalam modal
+        document.querySelectorAll('.panel-tabs').forEach(function (tabs) {
+            const buttons = tabs.querySelectorAll('.panel-tab');
+            const body = tabs.parentElement.querySelector('.modal-body');
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    buttons.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    body.querySelectorAll('.panel').forEach(function (panel) {
+                        panel.hidden = panel.id !== btn.getAttribute('data-panel');
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

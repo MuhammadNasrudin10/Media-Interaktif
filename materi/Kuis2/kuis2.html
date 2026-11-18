@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/css/style_materi.css">
+    <link rel="stylesheet" href="kuis2.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <title>Kuis 2: Pembagian Pecahan | Materi Siswa</title>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Menu Materi</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='uil uil-estate'></i>
+                    <span class="nama_menu">Beranda Menu</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda Menu</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu">
+                    <a href="../Subbab1/perkalian1_1.html">
+                        <i class='uil uil-abacus'></i>
+                        <span class="nama_menu">Perkalian</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab1/perkalian1_1.html">Perkalian</a></li>
+                    <li><a href="../Subbab1/perkalian1_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a></li>
+                    <li><a href="../Subbab2/perkalian2_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a href="../Subbab3/perkalian3_1.html">Pecahan Campuran <br> dengan Pecahan Biasa</a></li>
+                    <li><a href="../Kuis1/kuis1.html">Kuis 1</a></li>
+                </ul>
+            </li>
+            <li class="showMenu">
+                <div class="menu-active">
+                    <div class="menu" style="width:100%; padding:0;">
+                        <a href="../Subbab4/pembagian4_1.html" style="padding-left:0;">
+                            <i class='uil uil-calculator'></i>
+                            <span class="nama_menu">Pembagian</span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                    </div>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab4/pembagian4_1.html">Pembagian</a></li>
+                    <li><a href="../Subbab4/pembagian4_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a></li>
+                    <li><a href="../Subbab5/pembagian5_1.html">Pecahan Biasa dengan <br> Bilangan Asli</a></li>
+                    <li><a href="../Subbab6/pembagian6_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a href="../Subbab7/pembagian7_1.html">Pecahan Campuran <br> dengan Bilangan Asli</a></li>
+                    <li><a class="sub_menu_active" href="kuis2.html">Kuis 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../Evaluasi/evaluasi.html">
+                    <i class='uil uil-comments'></i>
+                    <span class="nama_menu">Evaluasi Akhir</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="../Evaluasi/evaluasi.html">Evaluasi Akhir</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Profile Footer -->
+        <div class="profile-details">
+            <div class="name-job">
+                <div class="profile_name" id="userlink">Memuat...</div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Akses Siswa</span>
+            </div>
+            <i class='bx bx-log-out' id="btn-logout" title="Keluar"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="home-section">
+        <!-- Top Navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">KUIS 2: Pembagian Pecahan</span>
+                </div>
+            </div>
+        </nav>
+
+        <!--Awal Konten -->
+        <div class="konten">
+            <!-- Awal Inti Materi -->
+            <div id="intimateri" class="inti-materi px-2">
+                <div class="container py-4" id="isi1">
+                    <div class="row justify-content-center gy-4">
+                        <div id="kiriAwal" class="col-lg-7 col-md-12">
+                            <div class="card border-0 shadow-sm rounded-4 h-100">
+                                <div class="card-header bg-primary text-white rounded-top-4 py-3">
+                                    <h5 class="mb-0 text-center fw-bold"><i class='bx bx-list-check me-2'></i> Petunjuk Pengerjaan</h5>
+                                </div>
+                                <div class="card-body p-4">
+                                    <ul class="list-group list-group-flush fs-6 lh-lg">
+                                        <li class="list-group-item bg-transparent border-bottom-0 py-1"><i class='bx bx-check-circle text-success me-2'></i> Kuis ini terdiri dari 10 soal berupa pilihan ganda.</li>
+                                        <li class="list-group-item bg-transparent border-bottom-0 py-1"><i class='bx bx-check-circle text-success me-2'></i> Setiap soal memiliki bobot 10 poin (Total 100).</li>
+                                        <li class="list-group-item bg-transparent border-bottom-0 py-1"><i class='bx bx-time text-warning me-2'></i> Waktu pengerjaan dibatasi selama <strong>15 menit</strong>.</li>
+                                        <li class="list-group-item bg-transparent border-bottom-0 py-1"><i class='bx bx-pointer text-primary me-2'></i> Tekan "Mulai" untuk menjawab kuis.</li>
+                                        <li class="list-group-item bg-transparent border-bottom-0 py-1"><i class='bx bx-check-square text-primary me-2'></i> Pilih salah satu pilihan jawaban yang dianggap paling benar.</li>
+                                        <li class="list-group-item bg-transparent border-bottom-0 py-1"><i class='bx bx-paper-plane text-info me-2'></i> Setelah semua pertanyaan selesai, tekan tombol "Selesai" untuk mengirim hasil kuis.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="kananAwal" class="col-lg-5 col-md-12">
+                            <div class="card border-0 shadow-sm rounded-4 h-100 bg-primary-subtle">
+                                <div class="card-body d-flex flex-column justify-content-center align-items-center p-5">
+                                    <h4 class="fw-bold text-primary mb-4 text-center">Data Peserta</h4>
+                                    <div class="d-flex align-items-center bg-white p-3 rounded-3 shadow-sm mb-5 w-100">
+                                        <div class="bg-primary bg-opacity-10 p-3 rounded-circle me-3">
+                                            <i class='bx bx-user fs-3 text-primary'></i>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0 text-muted fs-6">Nama Lengkap</p>
+                                            <h5 id="namaKuis" class="mb-0 fw-bold text-dark">Memuat...</h5>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex w-100 gap-3">
+                                        <a href="../Subbab7/pembagian7_1.html" class="btn btn-outline-primary fw-bold py-2 w-50 rounded-pill">
+                                            <i class='bx bx-arrow-back'></i> Kembali
+                                        </a>
+                                        <button id="btnmulai" class="btn btn-primary fw-bold py-2 w-50 rounded-pill shadow-sm">
+                                            Mulai Kuis <i class='bx bx-play-circle'></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--KONTEN KIRI: SOAL-->
+                <div class="kiri hilang" id="kiri">
+                    <div class="d-flex justify-content-center mb-4">
+                        <div class="time shadow-sm fw-bold" id="time">15 : 00</div>
+                    </div>
+
+                    <!--NOMOR 1-->
+                    <div class="bg_pertanyaan" id="bg_pertanyaan_1">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">1</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio1" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio1" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio1" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio1" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum disable" disabled><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 2-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_2">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">2</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio2" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio2" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio2" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio2" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 3-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_3">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">3</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio3" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio3" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio3" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio3" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 4-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_4">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">4</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio4" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio4" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio4" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio4" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 5-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_5">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">5</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio5" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio5" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio5" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio5" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 6-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_6">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">6</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio6" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio6" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio6" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio6" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 7-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_7">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">7</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio7" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio7" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio7" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio7" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 8-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_8">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">8</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio8" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio8" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio8" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio8" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 9-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_9">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">9</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio9" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio9" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio9" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio9" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut">Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--NOMOR 10-->
+                    <div class="bg_pertanyaan hilang" id="bg_pertanyaan_10">
+                        <div class="no">
+                            <div class="soal">
+                                <div class="nomor"><b>Pertanyaan <span class="nomornya">10</span></b></div>
+                            </div>
+                        </div>
+                        <div class="inti_pertanyaan">
+                            <div class="pertanyaannya">
+                                <p class="soalnya"></p>
+                            </div>
+                            <div class="batas"></div>
+                            <div class="soall">
+                                <div class="container-fluid px-0">
+                                    <div class="row gy-3">
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio10" value="a">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya0"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio10" value="b">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya1"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio10" value="c">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya2"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="bg_pilihan w-100">
+                                                <input type="radio" name="radio10" value="d">
+                                                <span class="textnya">
+                                                    <span class="nav_pilihan"></span>
+                                                    <div class="pilihannya3"></div>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-4">
+                                <button class="btn btn-outline-secondary fw-bold nav_sebelum"><i class='bx bx-chevron-left'></i> Sebelumnya</button>
+                                <button class="btn btn-primary fw-bold nav_selanjut disable" disabled>Selanjutnya <i class='bx bx-chevron-right'></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--BATAS KONTEN KIRI-->
+
+                <!--KONTEN KANAN: NAVIGASI SOAL-->
+                <div class="kanan hilang" id="kanan">
+                    <div class="bg_nav shadow-sm rounded-4">
+                        <div class="bg_full bg-primary rounded-top-4 py-2">
+                            <p class="text text-white fw-bold mb-0 text-center fs-5">Navigasi Soal</p>
+                        </div>
+                        <div class="bg_soal p-3">
+                            <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">1</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">2</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">3</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">4</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">5</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">6</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">7</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">8</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">9</p></div>
+                                <div class="soal_nav belum rounded shadow-sm text-center" style="width:45px;height:45px;cursor:pointer;"><p class="text fs-5 m-0 pt-2">10</p></div>
+                            </div>
+                            
+                            <div class="ket border-top pt-3 fs-6">
+                                <p class="mb-2 fw-semibold text-muted">Keterangan:</p>
+                                <div class="d-flex align-items-center mb-1">
+                                    <div class="bg-white border rounded me-2" style="width:15px;height:15px;"></div>
+                                    <span class="text-muted">Belum dijawab</span>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-warning border-warning rounded me-2" style="width:15px;height:15px;"></div>
+                                    <span class="text-muted">Sudah dijawab</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success fw-bold w-100 mt-3 py-3 rounded-4 shadow-sm selesai fs-5">
+                        <i class='bx bx-check-double'></i> SELESAI
+                    </button>
+                </div>
+                <!-- BATAS KONTEN KANAN-->
+
+                <!-- SKOR HASIL KUIS-->
+                <div class="dataaa hilang" id="halskor">
+                    <div class="container d-flex justify-content-center align-items-center py-5">
+                        <div class="card border-0 shadow-lg rounded-4 overflow-hidden w-100" style="max-width: 600px;">
+                            <div class="card-header bg-primary text-white text-center py-4">
+                                <h3 class="mb-0 fw-bold"><i class='bx bx-trophy text-warning me-2'></i> HASIL KUIS 2</h3>
+                            </div>
+                            <div class="card-body p-5 bg-light">
+                                <div class="table-responsive">
+                                    <table class="table table-borderless fs-5 mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-muted fw-semibold" style="width: 40%;">Nama Lengkap</td>
+                                                <td style="width: 5%;">:</td>
+                                                <td class="fw-bold text-dark nama">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-muted fw-semibold">Tanggal</td>
+                                                <td>:</td>
+                                                <td class="fw-bold text-dark hari">-</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-muted fw-semibold">Waktu Selesai</td>
+                                                <td>:</td>
+                                                <td class="fw-bold text-dark waktu">-</td>
+                                            </tr>
+                                            <tr class="border-top">
+                                                <td class="text-primary fw-bold pt-4 fs-4">Nilai Akhir</td>
+                                                <td class="pt-4 fs-4">:</td>
+                                                <td class="pt-4">
+                                                    <span class="badge bg-warning text-dark fs-2 rounded-pill px-4 hasill">0</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white border-0 text-center py-4">
+                                <a href="../Evaluasi/evaluasi.html" class="btn btn-primary fw-bold px-5 py-2 rounded-pill shadow-sm">
+                                    Lanjut ke Evaluasi Akhir <i class='bx bx-right-arrow-alt ms-2'></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- Akhir Inti Materi -->
+        </div> <!-- Akhir Konten -->
+    </section>
+
+    <!-- MathJax -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ 
+            tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+            CommonHTML: { scale: 140 },
+            "HTML-CSS": { scale: 140 },
+            SVG: { scale: 140 }
+        });
+    </script>
+
+    <script src="/js/script_materi.js"></script>
+    <script src=" https://unpkg.com/sweetalert/dist/sweetalert.min.js "></script>
+
+    <script type="module">
+        let userlink1 = document.getElementById('userlink');
+        let namaKuis = document.getElementById('namaKuis');
+        let nama1 = localStorage.getItem('nama');
+
+        if (!localStorage.getItem('loggedIn')) {
+            window.location = "/index.html";
+        }
+
+        function getNama() {
+            if (nama1 == null) {
+                window.location = "/index.html";
+            } else {
+                userlink1.innerText = nama1;
+                namaKuis.innerText = nama1;
+            }
+        }
+        getNama();
+
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Yakin ingin keluar?",
+                text: "Sesi belajarmu akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    localStorage.removeItem('nama');
+                    localStorage.removeItem('loggedIn');
+                    window.location = "/index.html";
+                }
+            });
+        })
+
+        const sidebarLinks = document.querySelectorAll('.nav-links a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+                swal({
+                    title: "Apakah kamu yakin ingin meninggalkan kuis?",
+                    text: "Jawaban yang sedang dikerjakan tidak akan tersimpan.",
+                    icon: "warning",
+                    buttons: ["Batal", "Ya, Tinggalkan"],
+                    dangerMode: true,
+                }).then((result) => {
+                    if (result) {
+                        window.location.href = link.href;
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, set, push } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCb8S9cTRe1Qppb2r0rqz3xA5vIL1wZrtI",
+            authDomain: "ta-media.firebaseapp.com",
+            databaseURL: "https://ta-media-default-rtdb.firebaseio.com",
+            projectId: "ta-media",
+            storageBucket: "ta-media.appspot.com",
+            messagingSenderId: "20586336998",
+            appId: "1:20586336998:web:f73665ad8ddf9e183ce127"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase();
+
+        let nama = localStorage.getItem('nama');
+        let selanjutnya = document.getElementById('btnmulai');
+        let datasiswa = document.querySelector('#isi1');
+
+        selanjutnya.addEventListener('click', function () {
+            document.getElementById('isi1').classList.add('hilang');
+            document.getElementById('kiri').classList.remove('hilang');
+            document.getElementById('kanan').classList.remove('hilang');
+            
+            startTimer();
+        });
+
+        let x;
+        function startTimer(){
+            let countDownDate = new Date().getTime() + 900000; // 15 Menit
+            
+            x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                document.getElementById("time").innerHTML = minutes + " : " + (seconds < 10 ? "0" : "") + seconds;
+
+                if (distance < 0) {
+                    clearInterval(x);
+                    document.getElementById("time").innerHTML = "HABIS";
+                    document.querySelector(".selesai").click(); // Auto submit
+                }
+            }, 1000);
+        }
+
+        let dat = new XMLHttpRequest();
+        dat.onreadystatechange = function () {
+            let cek = [];
+            let jwbs = [];
+            let hasilakhir = 0;
+
+            if (dat.readyState == 4 && dat.status == 200) {
+                let data = JSON.parse(this.responseText);
+
+                for (let x = 0; x < 100; x++) {
+                    let angka = Math.floor(Math.random() * data.length);
+                    cek.push(angka);
+                }
+                cek = Array.from(new Set(cek)).slice(0, 10); // Ambil 10 soal unik
+
+                for (let i = 0; i < cek.length; i++) {
+                    let nilai = cek[i];
+                    let soaldata = data[nilai]["soal" + nilai]["soal"];
+                    let bnr = data[nilai]["soal" + nilai]["benar"];
+                    
+                    // Cek apakah guru telah mengubah kunci jawaban di localStorage
+                    let kunciGuru = localStorage.getItem(`kunci_kuis2_soal${nilai}`);
+                    if (kunciGuru) {
+                        bnr = kunciGuru;
+                    }
+
+                    // Siapkan opsi jawaban asli
+                    let opsiAsli = [
+                        { huruf: 'a', teks: data[nilai]["soal" + nilai]["a"] },
+                        { huruf: 'b', teks: data[nilai]["soal" + nilai]["b"] },
+                        { huruf: 'c', teks: data[nilai]["soal" + nilai]["c"] },
+                        { huruf: 'd', teks: data[nilai]["soal" + nilai]["d"] }
+                    ];
+
+                    // Acak urutan opsi (Fisher-Yates Shuffle)
+                    for (let j = opsiAsli.length - 1; j > 0; j--) {
+                        const k = Math.floor(Math.random() * (j + 1));
+                        [opsiAsli[j], opsiAsli[k]] = [opsiAsli[k], opsiAsli[j]];
+                    }
+
+                    // Tentukan teks opsi baru setelah diacak
+                    let jwb0 = opsiAsli[0].teks;
+                    let jwb1 = opsiAsli[1].teks;
+                    let jwb2 = opsiAsli[2].teks;
+                    let jwb3 = opsiAsli[3].teks;
+
+                    // Cari posisi huruf (a/b/c/d) baru untuk kunci jawaban yang benar
+                    let indeksBaru = opsiAsli.findIndex(o => o.huruf === bnr);
+                    let hurufBaru = ['a', 'b', 'c', 'd'][indeksBaru];
+                    
+                    jwbs.push(hurufBaru);
+
+                    let nomor = document.querySelectorAll(".bg_pertanyaan .nomornya");
+                    nomor[i].innerHTML = i + 1;
+
+                    let soal = document.querySelectorAll(".bg_pertanyaan .soalnya");
+                    soal[i].innerHTML = soaldata;
+
+                    let piliha = document.querySelectorAll(".bg_pertanyaan .pilihannya0");
+                    piliha[i].innerHTML = jwb0;
+
+                    let pilihb = document.querySelectorAll(".bg_pertanyaan .pilihannya1");
+                    pilihb[i].innerHTML = jwb1;
+
+                    let pilihc = document.querySelectorAll(".bg_pertanyaan .pilihannya2");
+                    pilihc[i].innerHTML = jwb2;
+
+                    let pilihd = document.querySelectorAll(".bg_pertanyaan .pilihannya3");
+                    pilihd[i].innerHTML = jwb3;
+                }
+
+                if (typeof MathJax !== 'undefined') {
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                }
+
+                let bg_pertanyaan = document.querySelectorAll(".bg_pertanyaan");
+
+                // Navigasi Selanjutnya
+                let lanjut = document.querySelectorAll(".nav_selanjut");
+                for (let y = 0; y < lanjut.length; y++) {
+                    lanjut[y].addEventListener('click', function () {
+                        if (!lanjut[y].classList.contains('disable')) {
+                            bg_pertanyaan[y + 1].classList.remove("hilang");
+                            bg_pertanyaan[y].classList.add("hilang");
+                        }
+                    })
+                }
+
+                // Navigasi Sebelumnya
+                let sebelum = document.querySelectorAll(".nav_sebelum");
+                for (let y = 0; y < sebelum.length; y++) {
+                    sebelum[y].addEventListener('click', function () {
+                        if (!sebelum[y].classList.contains('disable')) {
+                            bg_pertanyaan[y - 1].classList.remove("hilang");
+                            bg_pertanyaan[y].classList.add("hilang");
+                        }
+                    })
+                }
+
+                // Navigasi Sidebar Soal
+                let soal_nav = document.querySelectorAll(".soal_nav");
+                for (let y = 0; y < soal_nav.length; y++) {
+                    soal_nav[y].addEventListener('click', function () {
+                        bg_pertanyaan.forEach(bg => bg.classList.add("hilang"));
+                        bg_pertanyaan[y].classList.remove("hilang");
+                    })
+                }
+
+                // Mewarnai soal yang sudah dijawab
+                let soall = document.querySelectorAll(".soall");
+                for (let y = 0; y < soall.length; y++) {
+                    let inputs = soall[y].querySelectorAll(".bg_pilihan input");
+                    inputs.forEach(input => {
+                        input.addEventListener('click', function () {
+                            soal_nav[y].classList.remove("belum");
+                            soal_nav[y].classList.add("sudah");
+                            soal_nav[y].style.backgroundColor = "#ffc107"; 
+                            soal_nav[y].style.color = "#000";
+                        });
+                    });
+                }
+
+                // Submit Kuis
+                let selesai = document.querySelector(".selesai");
+                selesai.addEventListener("click", function () {
+                    let terjawab = document.querySelectorAll('.soal_nav.sudah').length;
+                    
+                    if (terjawab < jwbs.length && document.getElementById("time").innerHTML !== "HABIS") {
+                        swal("Perhatian!", "Masih ada soal yang belum dijawab. Periksa kembali jawabanmu.", "warning");
+                        return;
+                    }
+
+                    clearInterval(x);
+                    hasilakhir = 0;
+                    let pil_user = [];
+                    let new_jwb_urut = [];
+
+                    for (let i = 0; i < jwbs.length; i++) {
+                        let namaradio = document.getElementsByName("radio" + (i + 1));
+                        for (let j = 0; j < namaradio.length; j++) {
+                            if (namaradio[j].checked) {
+                                pil_user.push(namaradio[j].value);
+                                if (namaradio[j].value == jwbs[i]) {
+                                    hasilakhir += 10;
+                                }
+                            }
+                        }
+                    }
+
+                    for (let i = 0; i < cek.length; i++) {
+                        new_jwb_urut.push(pil_user[i] || "kosong");
+                    }
+
+                    let waktunya = waktu();
+                    let harinya = hari();
+
+                    createTask(nama, hasilakhir, waktunya, harinya, new_jwb_urut);
+
+                    document.querySelector('.nama').innerText = nama;
+                    document.querySelector('.hari').innerText = harinya;
+                    document.querySelector('.waktu').innerText = waktunya;
+                    document.querySelector('.hasill').innerText = hasilakhir;
+
+                    document.getElementById('kiri').classList.add('hilang');
+                    document.getElementById('kanan').classList.add('hilang');
+                    document.getElementById('halskor').classList.remove('hilang');
+
+                    localStorage.setItem("kuis2", hasilakhir);
+                })
+            }
+        }
+        dat.open('GET', 'kuis2.json', true);
+        dat.send();
+
+        var counter = new Date().getTime();
+        function waktu() {
+            var tanggal = new Date();
+            return (tanggal.getHours() + ":" + (tanggal.getMinutes()<10?'0':'') + tanggal.getMinutes());
+        }
+
+        function hari() {
+            let namahari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            let namabulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+            let tgl = new Date();
+            return namahari[tgl.getDay()] + ", " + tgl.getDate() + " " + namabulan[tgl.getMonth()] + " " + tgl.getFullYear();
+        }
+
+        function createTask(nama, nilai, waktunya, hari, jwb) {
+            counter += 1;
+            push(ref(db, 'kuis2'), {
+                id: counter,
+                nama: nama,
+                nilai: nilai,
+                waktu: waktunya,
+                hari: hari,
+                jawabannya: jwb
+            })
+        }
+    </script>
+</body>
+
+</html>

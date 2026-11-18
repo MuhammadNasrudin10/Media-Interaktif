@@ -1,0 +1,102 @@
+[
+  {
+    "soal0": {
+      "soal": "Hasil dari \\(4 : \\dfrac{4}{5}\\) adalah...",
+      "a": "\\(\\dfrac{20}{4}\\)",
+      "b": "\\(\\dfrac{2}{5}\\)",
+      "c": "\\(\\dfrac{1}{7}\\)",
+      "d": "\\(\\dfrac{1}{3}\\)",
+      "benar": "a"
+    }
+  },
+  {
+    "soal1": {
+      "soal": "Hasil dari \\(3 : \\dfrac{3}{4}\\) adalah...",
+      "a": "\\(\\dfrac{10}{7}\\)",
+      "b": "\\(\\dfrac{2}{7}\\)",
+      "c": "\\(\\dfrac{12}{3}\\)",
+      "d": "\\(\\dfrac{5}{24}\\)",
+      "benar": "c"
+    }
+  },
+  {
+    "soal2": {
+      "soal": "Hasil dari \\(\\dfrac{3}{5} : 7\\) adalah...",
+      "a": "\\(\\dfrac{20}{21}\\)",
+      "b": "\\(\\dfrac{3}{25}\\)",
+      "c": "\\(\\dfrac{1}{25}\\)",
+      "d": "\\(\\dfrac{3}{35}\\)",
+      "benar": "d"
+    }
+  },
+  {
+    "soal3": {
+      "soal": "Hasil dari \\(\\dfrac{5}{8} : 4\\) adalah...",
+      "a": "\\(\\dfrac{11}{3}\\)",
+      "b": "\\(\\dfrac{5}{32}\\)",
+      "c": "\\(\\dfrac{1}{5}\\)",
+      "d": "\\(\\dfrac{2}{7}\\)",
+      "benar": "b"
+    }
+  },
+  {
+    "soal4": {
+      "soal": "Hasil dari \\(\\dfrac{7}{9} : \\dfrac{3}{5}\\) adalah...",
+      "a": "\\(\\dfrac{11}{24}\\)",
+      "b": "\\(\\dfrac{35}{27}\\)",
+      "c": "\\(\\dfrac{1}{2}\\)",
+      "d": "\\(\\dfrac{3}{35}\\)",
+      "benar": "b"
+    }
+  },
+  {
+    "soal5": {
+      "soal": "Hasil dari \\(\\dfrac{4}{7} : \\dfrac{2}{5}\\) adalah...",
+      "a": "\\(\\dfrac{20}{14}\\)",
+      "b": "\\(\\dfrac{2}{3}\\)",
+      "c": "\\(\\dfrac{2}{7}\\)",
+      "d": "\\(\\dfrac{1}{2}\\)",
+      "benar": "a"
+    }
+  },
+  {
+    "soal6": {
+      "soal": "Hasil dari \\(1\\dfrac{1}{9} : 5\\) adalah...",
+      "a": "\\(\\dfrac{1}{7}\\)",
+      "b": "\\(\\dfrac{10}{45}\\)",
+      "c": "\\(\\dfrac{2}{7}\\)",
+      "d": "\\(\\dfrac{4}{9}\\)",
+      "benar": "b"
+    }
+  },
+  {
+    "soal7": {
+      "soal": "Hasil dari \\(2\\dfrac{2}{3} : 4\\) adalah...",
+      "a": "\\(\\dfrac{3}{2}\\)",
+      "b": "\\(\\dfrac{8}{12}\\)",
+      "c": "\\(\\dfrac{1}{2}\\)",
+      "d": "\\(\\dfrac{11}{27}\\)",
+      "benar": "b"
+    }
+  },
+  {
+    "soal8": {
+      "soal": "Seorang pedagang membeli gula 20 kg. Gula tersebut selanjutnya akan dibungkus dalam plastik-plastik kecil. Setiap plastik kecil berisi \\(1\\dfrac{1}{4}\\) kg. Berapa plastik kecil yang dibutuhkan pedagang tersebut?",
+      "a": "8 plastik",
+      "b": "9 plastik",
+      "c": "13 plastik",
+      "d": "16 plastik",
+      "benar": "d"
+    }
+  },
+  {
+    "soal9": {
+      "soal": "Ibu memiliki susu \\(1\\dfrac{1}{3}\\) liter, susu tersebut akan dimasukkan ke dalam gelas. Setiap gelas berisi \\(\\dfrac{1}{5}\\) liter. Berapa gelas yang dibutuhkan Ibu?",
+      "a": "8 gelas",
+      "b": "9 gelas",
+      "c": "6 gelas",
+      "d": "4 gelas",
+      "benar": "c"
+    }
+  }
+]

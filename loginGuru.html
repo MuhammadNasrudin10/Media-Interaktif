@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login Guru | Media Pembelajaran Bilangan Pecahan Kelas 5 SD</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Custom Login CSS -->
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <!-- Animated Math Fractions Background -->
+    <div class="bg-shapes" aria-hidden="true">
+        <div class="shape shape-1">Â½ Ã— Â¾</div>
+        <div class="shape shape-2">â…” Ã· Â¼</div>
+        <div class="shape shape-3">â…— Ã— â…”</div>
+        <div class="shape shape-4">â…˜ Ã· Â½</div>
+        <div class="shape shape-5">â…œ</div>
+    </div>
+
+    <!-- Top Navigation -->
+    <nav class="auth-navbar">
+        <a href="index.html" class="brand-header">
+            <img src="img/logo.png" alt="Logo Media Pembelajaran">
+            <div class="brand-title">
+                <span class="main-title">Matematika Pecahan SD</span>
+                <span class="sub-title">Media Pembelajaran Interaktif Kelas V Vol. 2</span>
+            </div>
+        </a>
+
+        <div class="role-switcher" id="nav-tab" role="tablist">
+            <button class="role-btn" id="nav-home-tab" type="button" role="tab" aria-selected="false">
+                <i class='bx bxs-graduation'></i>
+                <span>Portal Siswa</span>
+            </button>
+            <button class="role-btn active" id="nav-profile-tab" type="button" role="tab" aria-selected="true">
+                <i class='bx bxs-chalkboard'></i>
+                <span>Portal Guru</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="auth-main">
+        <div class="auth-card">
+            <!-- Left Showcase Panel -->
+            <aside class="auth-showcase teacher-theme">
+                <div>
+                    <div class="showcase-badge">
+                        <i class='bx bxs-award'></i>
+                        <span>Dashboard Pengajar &amp; Evaluasi</span>
+                    </div>
+
+                    <div class="showcase-center">
+                        <div class="hero-illustration">
+                            <div class="hero-logo-box">
+                                <img src="img/logo.png" alt="Logo Portal Guru">
+                            </div>
+                            <div class="fraction-pills">
+                                <div class="fraction-pill">
+                                    <i class='bx bx-user-Check'></i>
+                                    <span>Manajemen Data Siswa</span>
+                                </div>
+                                <div class="fraction-pill">
+                                    <i class='bx bx-line-chart'></i>
+                                    <span>Monitoring Hasil Kuis &amp; Evaluasi</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h1 class="showcase-title">Panel Kendali Pembelajaran Guru</h1>
+                        <p class="showcase-desc">
+                            Kelola akun siswa, pantau capaian nilai Kuis 1, Kuis 2, serta Evaluasi Akhir secara real-time, dan unduh rekapitulasi nilai dengan mudah.
+                        </p>
+
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <i class='bx bxs-group'></i>
+                                <span>Kelola Akun &amp; Data Siswa</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class='bx bxs-spreadsheet'></i>
+                                <span>Pantau Nilai Kuis 1 &amp; 2</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class='bx bxs-check-shield'></i>
+                                <span>Hasil Evaluasi Real-Time</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class='bx bxs-file-export'></i>
+                                <span>Rekapitulasi &amp; Ekspor Data</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="showcase-footer">
+                    <i class='bx bxs-lock'></i>
+                    <span>Akses khusus pengajar dengan verifikasi Token Guru.</span>
+                </div>
+            </aside>
+
+            <!-- Right Forms Panel -->
+            <section class="containers forms">
+                <!-- Form Login Guru -->
+                <div class="form login">
+                    <div class="form-content">
+                        <div class="form-header-group">
+                            <span class="role-tag teacher">
+                                <i class='bx bxs-chalkboard'></i> Akses Pengajar
+                            </span>
+                            <header>Login Guru</header>
+                            <p class="form-subtitle">Masukkan kredensial dan kode token guru untuk mengakses dashboard.</p>
+                        </div>
+
+                        <div class="mode-tabs">
+                            <button type="button" class="mode-tab active" data-target="login">Masuk Dashboard</button>
+                            <button type="button" class="mode-tab link signup-link" data-target="signup">Registrasi Guru</button>
+                        </div>
+
+                        <form id="formLoginGuru" action="#" onsubmit="return false;">
+                            <div class="field-group">
+                                <label class="field-label" for="UsernameLogin">Username Guru</label>
+                                <div class="field input-field">
+                                    <i class='bx bx-user input-icon'></i>
+                                    <input type="text" id="UsernameLogin" placeholder="Masukkan username guru" class="input" autocomplete="username">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="PasswordLogin">Password</label>
+                                <div class="field input-field">
+                                    <i class='bx bx-lock-alt input-icon'></i>
+                                    <input type="password" id="PasswordLogin" placeholder="Masukkan password" class="password" autocomplete="current-password">
+                                    <i class='bx bx-hide eye-icon' title="Tampilkan/Sembunyikan Password"></i>
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="tokenLogin">Kode Token Guru</label>
+                                <div class="field input-field">
+                                    <i class='bx bx-key input-icon'></i>
+                                    <input type="number" id="tokenLogin" placeholder="Masukkan kode token otorisasi" class="input">
+                                </div>
+                            </div>
+
+                            <div class="field button-field">
+                                <button id="btn_login" type="button" class="teacher-btn">
+                                    <i class='bx bx-log-in-circle'></i>
+                                    <span>Masuk ke Dashboard Guru</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="form-link">
+                            <span>Belum memiliki akun pengajar? <a href="#" class="link signup-link">Daftar di sini</a></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Signup Guru -->
+                <div class="form signup">
+                    <div class="form-content">
+                        <div class="form-header-group">
+                            <span class="role-tag teacher">
+                                <i class='bx bxs-user-Check'></i> Registrasi Pengajar
+                            </span>
+                            <header>Daftar Akun Guru</header>
+                            <p class="form-subtitle">Lengkapi data dan token validasi untuk membuat akun guru baru.</p>
+                        </div>
+
+                        <div class="mode-tabs">
+                            <button type="button" class="mode-tab link login-link" data-target="login">Masuk Dashboard</button>
+                            <button type="button" class="mode-tab active" data-target="signup">Registrasi Guru</button>
+                        </div>
+
+                        <form id="formSignupGuru" action="#" onsubmit="return false;">
+                            <div class="field-group">
+                                <label class="field-label" for="nama">Nama Lengkap &amp; Gelar</label>
+                                <div class="field input-field">
+                                    <i class='bx bx-id-card input-icon'></i>
+                                    <input type="text" id="nama" placeholder="Contoh: Budi Santoso, S.Pd." class="input" autocomplete="name">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="username">Username</label>
+                                <div class="field input-field">
+                                    <i class='bx bx-user input-icon'></i>
+                                    <input type="text" id="username" placeholder="Buat username guru" class="input" autocomplete="username">
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="password">Password</label>
+                                <div class="field input-field">
+                                    <i class='bx bx-lock-alt input-icon'></i>
+                                    <input type="password" id="password" placeholder="Buat password keamanan" class="password" autocomplete="new-password">
+                                    <i class='bx bx-hide eye-icon' title="Tampilkan/Sembunyikan Password"></i>
+                                </div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label" for="token">Kode Token Guru</label>
+                                <div class="field input-field">
+                                    <i class='bx bx-key input-icon'></i>
+                                    <input type="number" id="token" placeholder="Masukkan token registrasi guru" class="input">
+                                </div>
+                            </div>
+
+                            <div class="field button-field">
+                                <button id="btn_signup" type="button" class="teacher-btn">
+                                    <i class='bx bx-user-plus'></i>
+                                    <span>Daftarkan Akun Guru</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="form-link">
+                            <span>Sudah memiliki akun guru? <a href="#" class="link login-link">Masuk di sini</a></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="auth-footer">
+        <span>Dikembangkan oleh <a href="https://www.instagram.com/muhammad_nsrdin/" target="_blank" rel="noopener noreferrer">Muhammad Nasrudin</a></span>
+    </footer>
+
+    <!-- JavaScript Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Application Script -->
+    <script type="module">
+        const forms = document.querySelector(".forms"),
+            pwShowHide = document.querySelectorAll(".eye-icon"),
+            links = document.querySelectorAll(".link");
+
+        // Toggle Show/Hide Password
+        pwShowHide.forEach(eyeIcon => {
+            eyeIcon.addEventListener("click", () => {
+                const pwInput = eyeIcon.parentElement.querySelector(".password");
+                if (!pwInput) return;
+
+                if (pwInput.type === "password") {
+                    pwInput.type = "text";
+                    eyeIcon.classList.replace("bx-hide", "bx-show");
+                } else {
+                    pwInput.type = "password";
+                    eyeIcon.classList.replace("bx-show", "bx-hide");
+                }
+            });
+        });
+
+        // Toggle Login / Signup View
+        links.forEach(link => {
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                if (link.classList.contains("signup-link")) {
+                    forms.classList.add("show-signup");
+                } else if (link.classList.contains("login-link")) {
+                    forms.classList.remove("show-signup");
+                } else {
+                    forms.classList.toggle("show-signup");
+                }
+            });
+        });
+
+        // Pindah Halaman Guru dan Siswa
+        const siswaButton = document.getElementById('nav-home-tab');
+        const guruButton = document.getElementById('nav-profile-tab');
+
+        siswaButton.addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+
+        guruButton.addEventListener('click', function () {
+            window.location.href = 'loginGuru.html';
+        });
+
+        // Firebase Configuration
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, child, set, get } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCb8S9cTRe1Qppb2r0rqz3xA5vIL1wZrtI",
+            authDomain: "ta-media.firebaseapp.com",
+            databaseURL: "https://ta-media-default-rtdb.firebaseio.com",
+            projectId: "ta-media",
+            storageBucket: "ta-media.appspot.com",
+            messagingSenderId: "20586336998",
+            appId: "1:20586336998:web:f73665ad8ddf9e183ce127"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // Reference
+        const name = document.getElementById("nama");
+        const username = document.getElementById("username");
+        const usernameLogin = document.getElementById("UsernameLogin");
+        const password = document.getElementById("password");
+        const passwordLogin = document.getElementById("PasswordLogin");
+        const token = document.getElementById("token");
+        const tokenLogin = document.getElementById("tokenLogin");
+        const btn_login = document.getElementById("btn_login");
+        const btn_signup = document.getElementById("btn_signup");
+
+        function setButtonLoading(button, isLoading, defaultHtml, loadingText) {
+            if (isLoading) {
+                button.disabled = true;
+                button.innerHTML = `<i class='bx bx-loader-alt bx-spin-custom'></i><span>${loadingText}</span>`;
+            } else {
+                button.disabled = false;
+                button.innerHTML = defaultHtml;
+            }
+        }
+
+        // Validation
+        function ValidationSignUp() {
+            if (name.value.trim() === "") {
+                swal("Nama tidak boleh kosong!", "Silakan masukkan nama lengkap pengajar.", "warning");
+                return false;
+            } else if (username.value.trim() === "") {
+                swal("Username tidak boleh kosong!", "Silakan buat username untuk akun guru.", "warning");
+                return false;
+            } else if (password.value === "") {
+                swal("Password tidak boleh kosong!", "Silakan buat password keamanan akun.", "warning");
+                return false;
+            } else if (token.value.trim() === "") {
+                swal("Token tidak boleh kosong!", "Masukkan kode token otorisasi guru.", "warning");
+                return false;
+            }
+            return true;
+        }
+
+        function ValidationLogin() {
+            if (usernameLogin.value.trim() === "") {
+                swal("Username tidak boleh kosong!", "Masukkan username akun guru Anda.", "warning");
+                return false;
+            } else if (passwordLogin.value === "") {
+                swal("Password tidak boleh kosong!", "Masukkan password akun guru Anda.", "warning");
+                return false;
+            } else if (tokenLogin.value.trim() === "") {
+                swal("Token tidak boleh kosong!", "Masukkan kode token guru untuk verifikasi.", "warning");
+                return false;
+            }
+            return true;
+        }
+
+        // Register User ke Firebase
+        function RegisterUser() {
+            if (!ValidationSignUp()) return;
+
+            const defaultBtn = `<i class='bx bx-user-plus'></i><span>Daftarkan Akun Guru</span>`;
+            setButtonLoading(btn_signup, true, defaultBtn, "Mendaftarkan...");
+
+            const cleanUsername = username.value.trim();
+            const dbRef = ref(db);
+
+            get(child(dbRef, "Guru/" + cleanUsername)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    setButtonLoading(btn_signup, false, defaultBtn);
+                    swal({
+                        title: "Gagal!",
+                        text: "Username sudah terdaftar, silakan gunakan username lain.",
+                        icon: "error",
+                        button: "Oke",
+                    });
+                } else {
+                    if (token.value == 1235) {
+                        set(ref(db, "Guru/" + cleanUsername), {
+                            name: name.value.trim(),
+                            username: cleanUsername,
+                            password: encPass(),
+                            token: token.value,
+                        }).then(() => {
+                            setButtonLoading(btn_signup, false, defaultBtn);
+                            swal({
+                                title: "Berhasil!",
+                                text: "Akun guru telah didaftarkan. Silakan masuk!",
+                                icon: "success",
+                                button: "Masuk Sekarang",
+                            }).then(() => {
+                                usernameLogin.value = cleanUsername;
+                                tokenLogin.value = token.value;
+                                passwordLogin.value = "";
+                                name.value = "";
+                                username.value = "";
+                                password.value = "";
+                                token.value = "";
+                                forms.classList.remove("show-signup");
+                                passwordLogin.focus();
+                            });
+                        });
+                    } else {
+                        setButtonLoading(btn_signup, false, defaultBtn);
+                        swal("Token Salah!", "Kode token otorisasi guru tidak sesuai.", "error");
+                    }
+                }
+            }).catch((error) => {
+                setButtonLoading(btn_signup, false, defaultBtn);
+                swal("Terjadi Kesalahan", String(error), "error");
+            });
+        }
+
+        function LoginUser() {
+            if (!ValidationLogin()) return;
+
+            const defaultBtn = `<i class='bx bx-log-in-circle'></i><span>Masuk ke Dashboard Guru</span>`;
+            setButtonLoading(btn_login, true, defaultBtn, "Memverifikasi...");
+
+            const cleanUsername = usernameLogin.value.trim();
+            const dbRef = ref(db);
+
+            get(child(dbRef, "Guru/" + cleanUsername)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    let dbnama = snapshot.val().name;
+                    let dbusername = snapshot.val().username;
+                    let dbpass = decPass(snapshot.val().password);
+                    let dbtoken = snapshot.val().token;
+
+                    if (dbusername == cleanUsername && dbpass == passwordLogin.value) {
+                        if (dbtoken == tokenLogin.value) {
+                            sessionStorage.setItem('nama', dbnama);
+                            window.location = "guru/guru.html";
+                        } else {
+                            setButtonLoading(btn_login, false, defaultBtn);
+                            swal("Token Salah!", "Kode token yang Anda masukkan tidak sesuai.", "error");
+                        }
+                    } else {
+                        setButtonLoading(btn_login, false, defaultBtn);
+                        swal("Password Salah!", "Periksa kembali password akun guru Anda.", "error");
+                    }
+                } else {
+                    setButtonLoading(btn_login, false, defaultBtn);
+                    swal("Username Tidak Terdaftar!", "Akun guru tidak ditemukan.", "error");
+                }
+            }).catch((error) => {
+                setButtonLoading(btn_login, false, defaultBtn);
+                swal("Gagal Terhubung", String(error), "error");
+            });
+        }
+
+        // Encryption Password
+        function encPass() {
+            var passcryp = CryptoJS.AES.encrypt(password.value, password.value);
+            return passcryp.toString();
+        }
+
+        // Decryption Password
+        function decPass(dbpass) {
+            var passcryp = CryptoJS.AES.decrypt(dbpass, passwordLogin.value);
+            return passcryp.toString(CryptoJS.enc.Utf8);
+        }
+
+        // Button Listeners
+        btn_login.addEventListener("click", LoginUser);
+        btn_signup.addEventListener("click", RegisterUser);
+
+        // Dukungan tombol Enter
+        [usernameLogin, passwordLogin, tokenLogin].forEach(input => {
+            input.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    LoginUser();
+                }
+            });
+        });
+
+        [name, username, password, token].forEach(input => {
+            input.addEventListener("keydown", (e) => {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    RegisterUser();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

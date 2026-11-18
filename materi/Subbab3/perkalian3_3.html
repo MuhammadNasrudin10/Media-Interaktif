@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/css/style_materi.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <title>Latihan Pecahan Campuran | Materi Siswa</title>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Menu Materi</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='uil uil-estate'></i>
+                    <span class="nama_menu">Beranda Menu</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda Menu</a></li>
+                </ul>
+            </li>
+            <li class="showMenu">
+                <div class="menu-active">
+                    <div class="menu" style="width:100%; padding:0;">
+                        <a href="perkalian3_1.html" style="padding-left:0;">
+                            <i class='uil uil-abacus'></i>
+                            <span class="nama_menu">Perkalian</span>
+                        </a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                    </div>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab1/perkalian1_1.html">Perkalian</a></li>
+                    <li><a href="../Subbab1/perkalian1_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a></li>
+                    <li><a href="../Subbab2/perkalian2_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a class="sub_menu_active" href="perkalian3_1.html">Pecahan Campuran <br> dengan Pecahan Biasa</a></li>
+                    <li><a href="../Kuis1/kuis1.html">Kuis 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu">
+                    <a href="../Subbab4/pembagian4_1.html">
+                        <i class='uil uil-calculator'></i>
+                        <span class="nama_menu">Pembagian</span>
+                    </a>
+                        <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="nama_menu" href="../Subbab4/pembagian4_1.html">Pembagian</a></li>
+                    <li><a href="../Subbab4/pembagian4_1.html">Bilangan Asli dengan <br> Pecahan Biasa</a></li>
+                    <li><a href="../Subbab5/pembagian5_1.html">Pecahan Biasa dengan <br> Bilangan Asli</a></li>
+                    <li><a href="../Subbab6/pembagian6_1.html">Dua Pecahan Biasa</a></li>
+                    <li><a href="../Subbab7/pembagian7_1.html">Pecahan Campuran <br> dengan Bilangan Asli</a></li>
+                    <li><a href="../Kuis2/kuis2.html">Kuis 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../Evaluasi/evaluasi.html">
+                    <i class='uil uil-comments'></i>
+                    <span class="nama_menu">Evaluasi Akhir</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="../Evaluasi/evaluasi.html">Evaluasi Akhir</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Profile Footer -->
+        <div class="profile-details">
+            <div class="name-job">
+                <div class="profile_name" id="userlink">Memuat...</div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Akses Siswa</span>
+            </div>
+            <i class='bx bx-log-out' id="btn-logout" title="Keluar"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="home-section">
+        <!-- Top Navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">Pecahan Campuran dengan Pecahan Biasa</span>
+                </div>
+            </div>
+        </nav>
+
+        <!--Awal Konten -->
+        <div class="konten">
+            <!-- Awal Inti Materi -->
+            <div class="inti-materi">
+                
+                <div class="text-center mb-4">
+                    <img src="/img/AyoMencoba.png" alt="Ayo Mencoba" style="max-width: 200px;">
+                </div>
+
+                <!-- Awal Card Soal Menggunakan Langkah -->
+                <div class="card border-dark mb-4" id="card-contoh">
+                    <div class="card-header d-flex align-items-center gap-2">
+                        <i class='bx bx-edit'></i> Latihan: Menggunakan Langkah-langkah
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <!-- Soal Langkah 1 -->
+                            <div class="row align-items-center">
+                                <div class="col-lg-3 col-md-12 mb-3 mb-lg-0 text-center text-lg-start">
+                                    <table class="fs-4 mx-auto mx-lg-0">
+                                        <tr>
+                                            <td rowspan="2" class="pe-2">\(1\frac{1}{4} \times \frac{1}{6}=\)</td>
+                                            <td><input id="pembilang1" class="pembilang text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebut1" class="penyebut text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- Column Langkah -->
+                                <div class="col-lg-9 col-md-12 overflow-auto">
+                                    <table class="fs-5 text-center mx-auto">
+                                        <tr>
+                                            <td rowspan="2" class="pe-2">\(1\frac{1}{4} \times \frac{1}{6}=\)</td>
+                                            <td><input id="pembilang2" class="pembilang text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                            <td rowspan="2" class="px-2">\(\times\)</td>
+                                            <td><input id="pembilang3" class="pembilang text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                            <td rowspan="2" class="px-2"> = </td>
+                                            <td><input id="pembilang4" class="pembilang text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebut2" class="penyebut text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                            <td><input id="penyebut3" class="penyebut text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                            <td><input id="penyebut4" class="penyebut text-center" placeholder="?" type="text" size="1" autocomplete="off"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div id="alertHasil1" class="mt-3"></div>
+                            <div class="text-center mt-3">
+                                <button id="btn1" type="button" class="btn btn-primary fw-bold px-4">
+                                    <i class='bx bx-check-shield'></i> Cek Jawaban Bagian 1
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Akhir Card Soal Menggunakan Langkah -->
+
+                <!-- Awal Card Soal Langsung -->
+                <div class="card border-dark mb-3" id="card-contoh">
+                    <div class="card-header d-flex align-items-center gap-2">
+                        <i class='bx bx-check-square'></i> Latihan: Soal Langsung Jawaban Akhir
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center mb-4 gy-4">
+                                <div class="col-md-4 text-center">
+                                    <table class="fs-5 mx-auto">
+                                        <tr>
+                                            <td rowspan="2" class="pe-2">\(2\frac{2}{3} \times \frac{1}{6}=\) </td>
+                                            <td><input id="pembilangs1" class="pembilang" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts1" class="penyebut" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <table class="fs-5 mx-auto">
+                                        <tr>
+                                            <td rowspan="2" class="pe-2">\(2\frac{4}{5} \times \frac{1}{8}=\) </td>
+                                            <td><input id="pembilangs2" class="pembilang" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts2" class="penyebut" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-4 text-center">
+                                    <table class="fs-5 mx-auto">
+                                        <tr>
+                                            <td rowspan="2" class="pe-2">\(1\frac{2}{7} \times \frac{2}{5} =\) </td>
+                                            <td><input id="pembilangs3" class="pembilang" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts3" class="penyebut" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="row justify-content-center mb-4 gy-4">
+                                <div class="col-md-5 text-center">
+                                    <table class="fs-5 mx-auto">
+                                        <tr>
+                                            <td rowspan="2" class="pe-2">\(\frac{2}{3} \times 1\frac{5}{9} =\) </td>
+                                            <td><input id="pembilangs4" class="pembilang" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts4" class="penyebut" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="col-md-5 text-center">
+                                    <table class="fs-5 mx-auto">
+                                        <tr>
+                                            <td rowspan="2" class="pe-2">\(\frac{2}{5} \times 1\frac{3}{7} =\) </td>
+                                            <td><input id="pembilangs5" class="pembilang" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input id="penyebuts5" class="penyebut" type="text" placeholder="?" size="1" autocomplete="off"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div id="alertHasil2" class="my-2"></div>
+                            <div class="text-center mt-3">
+                                <button id="btn2" type="button" class="btn btn-primary fw-bold px-4">
+                                    <i class='bx bx-check-shield'></i> Cek Jawaban Bagian 2
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Akhir Card Soal Langsung -->
+            </div> <!-- Akhir Inti Materi -->
+
+            <!-- Awal pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center mt-4 mb-0">
+                    <li class="page-item">
+                        <a class="page-link" href="perkalian3_2.html"><i class='bx bx-chevron-left'></i> Sebelumnya</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="perkalian3_1.html">1</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="perkalian3_2.html">2</a>
+                    </li>
+                    <li class="page-item active" aria-current="page">
+                        <a class="page-link" href="perkalian3_3.html">3</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="kesimpulan3.html">4</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="kesimpulan3.html">Selanjutnya <i class='bx bx-chevron-right'></i></a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- Akhir pagination -->
+        </div> <!-- Akhir Konten -->
+    </section>
+
+    <!-- MathJax -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- My JS -->
+    <script src="/js/script_materi.js"></script>
+    <script src="js/perkalian3_3.js"></script>
+    <script src="/js/database.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector("#sidebarBtn");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <script type="module">
+        let userlink = document.getElementById('userlink');
+        let nama = localStorage.getItem('nama');
+
+        if (!localStorage.getItem('loggedIn')) {
+            window.location = "/index.html";
+        }
+
+        function getNama() {
+            if (nama == null) {
+                window.location = "/index.html";
+            } else {
+                userlink.innerText = nama;
+            }
+        }
+        getNama();
+
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Keluar dari Materi?",
+                text: "Sesi belajarmu akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    localStorage.removeItem('nama');
+                    localStorage.removeItem('loggedIn');
+                    window.location = "/index.html";
+                }
+            });
+        })
+    </script>
+</body>
+
+</html>

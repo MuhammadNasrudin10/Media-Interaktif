@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="css/guru.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Manajemen Kunci Jawaban | Portal Guru</title>
+    <style>
+        /* Custom styles untuk Kunci Jawaban */
+        .nav-tabs .nav-link {
+            color: var(--text-muted);
+            font-weight: 600;
+            border: none;
+            border-bottom: 3px solid transparent;
+            padding: 12px 20px;
+            transition: all 0.2s ease;
+        }
+        .nav-tabs .nav-link:hover {
+            color: var(--primary);
+            background-color: var(--primary-light);
+            border-radius: 8px 8px 0 0;
+        }
+        .nav-tabs .nav-link.active {
+            color: var(--primary);
+            border-bottom: 3px solid var(--primary);
+            background: transparent;
+        }
+        .table-kunci th {
+            background-color: #f8fafc;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            color: #475569;
+            letter-spacing: 0.05em;
+        }
+        .table-kunci td {
+            vertical-align: middle;
+            font-size: 0.95rem;
+        }
+        .soal-img {
+            max-height: 40px;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        .opt-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.8rem;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            margin-right: 6px;
+        }
+        .select-kunci {
+            width: 80px;
+            display: inline-block;
+            font-weight: 700;
+            color: var(--primary);
+            border: 2px solid var(--primary-light);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .select-kunci:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Portal Guru</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='bx bx-home-alt'></i>
+                    <span class="nama_menu">Beranda Materi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda Materi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="guru.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span class="nama_menu">Data Siswa</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru.html">Data Siswa</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="kuis1.html">
+                    <i class='bx bx-abacus'></i>
+                    <span class="nama_menu">Hasil Kuis 1</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="kuis1.html">Hasil Kuis 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="kuis2.html">
+                    <i class='bx bx-calculator'></i>
+                    <span class="nama_menu">Hasil Kuis 2</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="kuis2.html">Hasil Kuis 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="evaluasi.html">
+                    <i class='bx bx-task'></i>
+                    <span class="nama_menu">Hasil Evaluasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="evaluasi.html">Hasil Evaluasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="rekapitulasi.html">
+                    <i class='bx bx-bar-chart-square'></i>
+                    <span class="nama_menu">Rekapitulasi Akhir</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="rekapitulasi.html">Rekapitulasi Akhir</a></li>
+                </ul>
+            </li>
+            <!-- Menu Baru -->
+            <li>
+                <div class="menu-active">
+                    <a href="kunciJawaban.html">
+                        <i class='bx bx-key'></i>
+                        <span class="nama_menu">Kunci Jawaban</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="kunciJawaban.html">Kunci Jawaban</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Profile Footer -->
+        <div class="profile-details">
+            <div class="name-job">
+                <div class="profile_name" id="userlink">Memuat Nama...</div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Akses Pengajar</span>
+            </div>
+            <i class='bx bx-log-out' id="btn-logout" title="Keluar dari Dashboard"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="home-section">
+        <!-- Top Navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">Manajemen Kunci Jawaban</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Konten Inti -->
+        <div class="konten">
+            <div class="inti-materi">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h4 class="fw-bold mb-1" style="color: #0f172a;">Kelola Kunci Jawaban</h4>
+                        <p class="text-muted mb-0" style="font-size: 0.9rem;">Ubah kunci jawaban untuk Kuis 1, Kuis 2, dan Evaluasi. Perubahan disimpan secara lokal di browser.</p>
+                    </div>
+                </div>
+
+                <!-- Tabs -->
+                <ul class="nav nav-tabs mb-4" id="kunciTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="kuis1-tab" data-bs-toggle="tab" data-bs-target="#kuis1" type="button" role="tab" aria-controls="kuis1" aria-selected="true">Kuis 1</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="kuis2-tab" data-bs-toggle="tab" data-bs-target="#kuis2" type="button" role="tab" aria-controls="kuis2" aria-selected="false">Kuis 2</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="evaluasi-tab" data-bs-toggle="tab" data-bs-target="#evaluasi" type="button" role="tab" aria-controls="evaluasi" aria-selected="false">Evaluasi Akhir</button>
+                    </li>
+                </ul>
+
+                <!-- Tab Content -->
+                <div class="tab-content" id="kunciTabContent">
+                    <!-- Kuis 1 -->
+                    <div class="tab-pane fade show active" id="kuis1" role="tabpanel" aria-labelledby="kuis1-tab">
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-primary" onclick="simpanKunci('kuis1')"><i class='bx bx-save me-1'></i> Simpan Kunci Kuis 1</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-kunci align-middle">
+                                <thead>
+                                    <tr>
+                                        <th width="5%" class="text-center">No</th>
+                                        <th width="40%">Soal</th>
+                                        <th width="40%">Pilihan (A / B / C / D)</th>
+                                        <th width="15%" class="text-center">Kunci Jawaban</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-kuis1">
+                                    <tr><td colspan="4" class="text-center text-muted">Memuat data...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Kuis 2 -->
+                    <div class="tab-pane fade" id="kuis2" role="tabpanel" aria-labelledby="kuis2-tab">
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-primary" onclick="simpanKunci('kuis2')"><i class='bx bx-save me-1'></i> Simpan Kunci Kuis 2</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-kunci align-middle">
+                                <thead>
+                                    <tr>
+                                        <th width="5%" class="text-center">No</th>
+                                        <th width="40%">Soal</th>
+                                        <th width="40%">Pilihan (A / B / C / D)</th>
+                                        <th width="15%" class="text-center">Kunci Jawaban</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-kuis2">
+                                    <tr><td colspan="4" class="text-center text-muted">Memuat data...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Evaluasi -->
+                    <div class="tab-pane fade" id="evaluasi" role="tabpanel" aria-labelledby="evaluasi-tab">
+                        <div class="d-flex justify-content-end mb-3">
+                            <button class="btn btn-primary" onclick="simpanKunci('evaluasi')"><i class='bx bx-save me-1'></i> Simpan Kunci Evaluasi</button>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-kunci align-middle">
+                                <thead>
+                                    <tr>
+                                        <th width="5%" class="text-center">No</th>
+                                        <th width="40%">Soal</th>
+                                        <th width="40%">Pilihan (A / B / C / D)</th>
+                                        <th width="15%" class="text-center">Kunci Jawaban</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-evaluasi">
+                                    <tr><td colspan="4" class="text-center text-muted">Memuat data...</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <!-- MathJax -->
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector("#sidebarBtn");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <!-- Auth Script -->
+    <script type="module">
+        let userlink = document.getElementById('userlink');
+        let nama = sessionStorage.getItem('nama');
+
+        function getNama() {
+            if (nama == null) {
+                window.location = "/loginGuru.html";
+            } else {
+                userlink.innerText = nama;
+            }
+        }
+        getNama();
+
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Keluar Dashboard?",
+                text: "Sesi Anda sebagai pengajar akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    sessionStorage.removeItem('nama');
+                    window.location = "/loginGuru.html";
+                }
+            });
+        });
+    </script>
+
+    <!-- Data Fetching & Rendering Script -->
+    <script>
+        // Base path untuk file JSON dari folder guru
+        const basePath = {
+            kuis1: '../materi/Kuis1/kuis1.json',
+            kuis2: '../materi/Kuis2/kuis2.json',
+            evaluasi: '../materi/Evaluasi/evaluasi1.json'
+        };
+
+        // Fungsi untuk memuat data JSON dan merender tabel
+        async function loadData(type) {
+            try {
+                const response = await fetch(basePath[type]);
+                const data = await response.json();
+                
+                const tbody = document.getElementById(`tbody-${type}`);
+                let html = '';
+                
+                let imgBasePath = '';
+                if (type === 'kuis1') imgBasePath = '../materi/Kuis1/';
+                else if (type === 'kuis2') imgBasePath = '../materi/Kuis2/';
+                else if (type === 'evaluasi') imgBasePath = '../materi/Evaluasi/';
+
+                data.forEach((item, index) => {
+                    const key = Object.keys(item)[0];
+                    const soal = item[key];
+                    
+                    // Cek apakah ada kunci jawaban yang sudah diubah di localStorage
+                    const savedKunci = localStorage.getItem(`kunci_${type}_${key}`) || soal.benar;
+
+                    html += `
+                        <tr>
+                            <td class="text-center fw-bold text-muted">${index + 1}</td>
+                            <td>${soal.soal}</td>
+                            <td>
+                                <div class="row row-cols-2 g-2">
+                                    <div class="col"><span class="opt-badge">A</span> ${soal.a}</div>
+                                    <div class="col"><span class="opt-badge">B</span> ${soal.b}</div>
+                                    <div class="col"><span class="opt-badge">C</span> ${soal.c}</div>
+                                    <div class="col"><span class="opt-badge">D</span> ${soal.d}</div>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <select class="form-select select-kunci" id="kunci_${type}_${key}" data-key="${key}">
+                                    <option value="a" ${savedKunci === 'a' ? 'selected' : ''}>A</option>
+                                    <option value="b" ${savedKunci === 'b' ? 'selected' : ''}>B</option>
+                                    <option value="c" ${savedKunci === 'c' ? 'selected' : ''}>C</option>
+                                    <option value="d" ${savedKunci === 'd' ? 'selected' : ''}>D</option>
+                                </select>
+                            </td>
+                        </tr>
+                    `;
+                });
+                
+                tbody.innerHTML = html;
+
+                if (typeof MathJax !== 'undefined') {
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub, tbody]);
+                }
+            } catch (error) {
+                console.error(`Gagal memuat data ${type}:`, error);
+                document.getElementById(`tbody-${type}`).innerHTML = '<tr><td colspan="4" class="text-center text-danger">Gagal memuat data. Pastikan file JSON tersedia.</td></tr>';
+            }
+        }
+
+        // Fungsi untuk menyimpan kunci jawaban ke localStorage
+        function simpanKunci(type) {
+            const selects = document.querySelectorAll(`#tbody-${type} .select-kunci`);
+            let count = 0;
+            
+            selects.forEach(select => {
+                const key = select.getAttribute('data-key');
+                const val = select.value;
+                localStorage.setItem(`kunci_${type}_${key}`, val);
+                count++;
+            });
+            
+            swal({
+                title: "Berhasil Disimpan!",
+                text: `Kunci jawaban ${type.toUpperCase()} (${count} soal) telah diperbarui.`,
+                icon: "success",
+                button: "Oke",
+            });
+        }
+
+        // Muat semua data saat halaman selesai dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData('kuis1');
+            loadData('kuis2');
+            loadData('evaluasi');
+        });
+    </script>
+</body>
+
+</html>

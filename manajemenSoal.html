@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/img/logo.png">
+
+    <!-- My CSS (Gunakan style guru yang sama) -->
+    <link rel="stylesheet" href="guru/css/guru.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Icon CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Manajemen Soal | Portal Guru</title>
+    <style>
+        .math-preview { background: #f8fafc; padding: 10px; border-radius: 8px; border: 1px dashed #cbd5e1; font-size: 1rem; color: #0f172a; }
+        .table-responsive { background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .toolbar-math .btn { font-size: 0.8rem; font-weight: 600; }
+        
+        /* SweetAlert Custom Styles */
+        .swal-modal { border-radius: 15px; }
+        .swal-button { border-radius: 8px; }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="/img/logo.png" alt="Logo" width="42" height="42">
+            <span class="logo_name">Portal Guru</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/beranda.html">
+                    <i class='bx bx-home-alt'></i>
+                    <span class="nama_menu">Beranda Materi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="/beranda.html">Beranda Materi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="guru/guru.html">
+                    <i class='bx bx-user-pin'></i>
+                    <span class="nama_menu">Data Siswa</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru/guru.html">Data Siswa</a></li>
+                </ul>
+            </li>
+            <li>
+                <div class="menu-active">
+                    <a href="manajemenSoal.html">
+                        <i class='bx bx-edit'></i>
+                        <span class="nama_menu">Manajemen Soal</span>
+                    </a>
+                </div>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="manajemenSoal.html">Manajemen Soal</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="guru/kuis1.html">
+                    <i class='bx bx-abacus'></i>
+                    <span class="nama_menu">Hasil Kuis 1</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru/kuis1.html">Hasil Kuis 1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="guru/kuis2.html">
+                    <i class='bx bx-calculator'></i>
+                    <span class="nama_menu">Hasil Kuis 2</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru/kuis2.html">Hasil Kuis 2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="guru/evaluasi.html">
+                    <i class='bx bx-task'></i>
+                    <span class="nama_menu">Hasil Evaluasi</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru/evaluasi.html">Hasil Evaluasi</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="guru/rekapitulasi.html">
+                    <i class='bx bx-bar-chart-square'></i>
+                    <span class="nama_menu">Rekapitulasi Akhir</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="nama_menu" href="guru/rekapitulasi.html">Rekapitulasi Akhir</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Profile Footer -->
+        <div class="profile-details">
+            <div class="name-job">
+                <div class="profile_name" id="userlink">Memuat Nama...</div>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Akses Pengajar</span>
+            </div>
+            <i class='bx bx-log-out' id="btn-logout" title="Keluar dari Dashboard"></i>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <section class="home-section">
+        <!-- Top Navbar -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <div class="home-content">
+                    <i class='bx bx-menu' id="sidebarBtn"></i>
+                    <span class="text">Manajemen Soal Ujian</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Konten Inti -->
+        <div class="konten">
+            <div class="inti-materi">
+                <!-- Header Title & Filter -->
+                <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                    <div>
+                        <h4 class="fw-bold mb-1" style="color: #0f172a;">Bank Soal Kuis & Evaluasi</h4>
+                        <p class="text-muted mb-0" style="font-size: 0.9rem;">Kelola daftar pertanyaan secara real-time yang akan ditarik oleh siswa.</p>
+                    </div>
+                    <div class="d-flex gap-3 align-items-center">
+                        <label class="fw-bold text-muted">Pilih Kategori:</label>
+                        <select id="pilihKategori" class="form-select fw-bold border-primary text-primary" style="width: 220px;">
+                            <option value="Kuis1">Evaluasi / Kuis 1</option>
+                            <option value="Kuis2">Evaluasi / Kuis 2</option>
+                            <option value="Evaluasi">Ujian Evaluasi Akhir</option>
+                        </select>
+                        <button class="btn btn-primary fw-bold shadow-sm px-4" onclick="bukaModalTambah()">
+                            <i class='bx bx-plus-circle'></i> Tambah Soal
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tabel Soal -->
+                <div class="table-responsive p-3 border">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th width="5%">No</th>
+                                <th width="35%">Pertanyaan</th>
+                                <th width="10%">Opsi A</th>
+                                <th width="10%">Opsi B</th>
+                                <th width="10%">Opsi C</th>
+                                <th width="10%">Opsi D</th>
+                                <th width="10%" class="text-center">Kunci</th>
+                                <th width="10%" class="text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabelSoalBody">
+                            <tr>
+                                <td colspan="8" class="text-center py-4 text-muted">
+                                    <i class='bx bx-loader-alt bx-spin fs-3 mb-2'></i><br>Memuat data dari Firebase...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Tambah/Edit Soal -->
+    <div class="modal fade" id="modalSoal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content rounded-4 border-0 shadow-lg">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title fw-bold" id="modalTitle"><i class='bx bx-edit'></i> Edit Soal</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form id="formSoal" onsubmit="return false;">
+                    <div class="modal-body p-4">
+                        <input type="hidden" id="soalId">
+                        
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between align-items-end mb-2">
+                                <label class="form-label fw-bold mb-0">Pertanyaan Soal</label>
+                                <div class="toolbar-math gap-1 d-flex">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="insertSimbol('\\times', 'inputPertanyaan')"><i class='bx bx-x'></i> Kali</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="insertSimbol(':', 'inputPertanyaan')">Ã· Bagi</button>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="bikinPecahan('inputPertanyaan')"><i class='bx bx-plus'></i> Pecahan</button>
+                                </div>
+                            </div>
+                            <textarea id="inputPertanyaan" class="form-control" rows="3" required oninput="previewMath()"></textarea>
+                            <div class="mt-2 text-muted" style="font-size: 0.8rem;"><i class='bx bx-show'></i> Pratinjau Tampilan Pertanyaan:</div>
+                            <div id="prevPertanyaan" class="math-preview"></div>
+                        </div>
+
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold d-flex justify-content-between align-items-center mb-1">
+                                    Pilihan A
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 0.75rem;" onclick="bikinPecahan('inputA')">+ Pecahan</button>
+                                </label>
+                                <input type="text" id="inputA" class="form-control mb-1" required oninput="previewMath()">
+                                <div id="prevA" class="math-preview mt-1" style="min-height:35px; padding: 5px 10px;"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold d-flex justify-content-between align-items-center mb-1">
+                                    Pilihan B
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 0.75rem;" onclick="bikinPecahan('inputB')">+ Pecahan</button>
+                                </label>
+                                <input type="text" id="inputB" class="form-control mb-1" required oninput="previewMath()">
+                                <div id="prevB" class="math-preview mt-1" style="min-height:35px; padding: 5px 10px;"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold d-flex justify-content-between align-items-center mb-1">
+                                    Pilihan C
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 0.75rem;" onclick="bikinPecahan('inputC')">+ Pecahan</button>
+                                </label>
+                                <input type="text" id="inputC" class="form-control mb-1" required oninput="previewMath()">
+                                <div id="prevC" class="math-preview mt-1" style="min-height:35px; padding: 5px 10px;"></div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold d-flex justify-content-between align-items-center mb-1">
+                                    Pilihan D
+                                    <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2" style="font-size: 0.75rem;" onclick="bikinPecahan('inputD')">+ Pecahan</button>
+                                </label>
+                                <input type="text" id="inputD" class="form-control mb-1" required oninput="previewMath()">
+                                <div id="prevD" class="math-preview mt-1" style="min-height:35px; padding: 5px 10px;"></div>
+                            </div>
+                        </div>
+
+                        <div class="mb-2 mt-4">
+                            <label class="form-label fw-bold text-success">Kunci Jawaban Benar</label>
+                            <select id="inputKunci" class="form-select border-success fw-bold" required>
+                                <option value="A">Pilihan A</option>
+                                <option value="B">Pilihan B</option>
+                                <option value="C">Pilihan C</option>
+                                <option value="D">Pilihan D</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer bg-light">
+                        <button type="button" class="btn btn-secondary fw-bold rounded-pill px-4" data-bs-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary fw-bold rounded-pill px-4" id="btnSimpan">
+                            <i class='bx bx-save'></i> Simpan Soal
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Sidebar Toggle Script -->
+    <script>
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector("#sidebarBtn");
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+    </script>
+
+    <!-- Auth Script -->
+    <script type="module">
+        let userlink = document.getElementById('userlink');
+        let nama = sessionStorage.getItem('nama');
+        function getNama() {
+            if (nama == null) {
+                window.location = "/loginGuru.html";
+            } else {
+                userlink.innerText = nama;
+            }
+        }
+        getNama();
+        document.getElementById("btn-logout").addEventListener("click", function () {
+            swal({
+                title: "Keluar Dashboard?",
+                text: "Sesi Anda sebagai pengajar akan diakhiri.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Keluar"],
+                dangerMode: true,
+            }).then((willLogout) => {
+                if (willLogout) {
+                    sessionStorage.removeItem('nama');
+                    window.location = "/loginGuru.html";
+                }
+            });
+        });
+    </script>
+
+    <!-- Firebase & Logic CMS Soal -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+        import { getDatabase, ref, child, get, push, update, remove, onValue } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCb8S9cTRe1Qppb2r0rqz3xA5vIL1wZrtI",
+            authDomain: "ta-media.firebaseapp.com",
+            databaseURL: "https://ta-media-default-rtdb.firebaseio.com",
+            projectId: "ta-media",
+            storageBucket: "ta-media.appspot.com",
+            messagingSenderId: "20586336998",
+            appId: "1:20586336998:web:f73665ad8ddf9e183ce127"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        const modalSoal = new bootstrap.Modal(document.getElementById('modalSoal'));
+        const tabelBody = document.getElementById('tabelSoalBody');
+        const kategoriSelect = document.getElementById('pilihKategori');
+
+        kategoriSelect.addEventListener('change', muatDataSoal);
+
+        function muatDataSoal() {
+            tabelBody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-muted"><i class='bx bx-loader-alt bx-spin fs-3 mb-2'></i><br>Memuat soal...</td></tr>`;
+            const kategori = kategoriSelect.value;
+            const dbRef = ref(db, 'BankSoal/' + kategori);
+
+            onValue(dbRef, (snapshot) => {
+                tabelBody.innerHTML = '';
+                if (snapshot.exists()) {
+                    let no = 1;
+                    snapshot.forEach((childSnapshot) => {
+                        const id = childSnapshot.key;
+                        const data = childSnapshot.val();
+
+                        const tr = document.createElement('tr');
+                        tr.innerHTML = `
+                            <td class="fw-bold">${no++}</td>
+                            <td><div class="math-preview" style="background:transparent; border:none; padding:0;">${data.pertanyaan}</div></td>
+                            <td>${data.pilihanA}</td>
+                            <td>${data.pilihanB}</td>
+                            <td>${data.pilihanC}</td>
+                            <td>${data.pilihanD}</td>
+                            <td class="text-center"><span class="badge bg-success fs-6">${data.jawabanBenar}</span></td>
+                            <td class="text-center">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-sm btn-info text-white" onclick="bukaModalEdit('${id}')"><i class='bx bx-edit'></i></button>
+                                    <button class="btn btn-sm btn-danger" onclick="hapusSoal('${id}')"><i class='bx bx-trash'></i></button>
+                                </div>
+                            </td>
+                        `;
+                        tabelBody.appendChild(tr);
+                    });
+                    if(window.MathJax) { MathJax.typesetPromise(); }
+                } else {
+                    tabelBody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-muted fw-semibold">Belum ada soal di kategori ini. Silakan tambah soal baru.</td></tr>`;
+                }
+            }, (error) => {
+                swal("Gagal Memuat", error.message, "error");
+            });
+        }
+
+        muatDataSoal();
+
+        // ----------------------------------------------------
+        // FITUR BANTUAN GENERATOR PECAHAN (UNTUK GURU)
+        // ----------------------------------------------------
+        window.bikinPecahan = function(targetId) {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = `
+                <div class="mb-3">
+                    <label class="form-label text-start w-100 fw-bold fs-6 text-muted">Bilangan Utama (Opsional)</label>
+                    <input id="swal-bilangan" class="form-control" placeholder="Contoh: 2 (Kosongkan jika bukan pecahan campuran)">
+                </div>
+                <div class="row g-2">
+                    <div class="col-6">
+                        <label class="form-label text-start w-100 fw-bold fs-6 text-muted">Angka Atas</label>
+                        <input id="swal-atas" class="form-control border-primary" type="number" placeholder="Pembilang">
+                    </div>
+                    <div class="col-6">
+                        <label class="form-label text-start w-100 fw-bold fs-6 text-muted">Angka Bawah</label>
+                        <input id="swal-bawah" class="form-control border-primary" type="number" placeholder="Penyebut">
+                    </div>
+                </div>
+            `;
+            
+            swal({
+                title: "Buat Pecahan Otomatis",
+                content: wrapper,
+                buttons: {
+                    cancel: { text: "Batal", visible: true },
+                    confirm: { text: "Sisipkan ke Soal", value: true, className: "btn-primary" }
+                }
+            }).then((result) => {
+                if(result) {
+                    const bil = document.getElementById('swal-bilangan').value.trim();
+                    const atas = document.getElementById('swal-atas').value.trim();
+                    const bawah = document.getElementById('swal-bawah').value.trim();
+                    
+                    if (atas && bawah) {
+                        // Merakit Kode LaTeX secara otomatis
+                        let teksPecahan = `\\(\\dfrac{${atas}}{${bawah}}\\)`;
+                        if (bil) teksPecahan = `\\(${bil}\\dfrac{${atas}}{${bawah}}\\)`;
+                        
+                        const inputField = document.getElementById(targetId);
+                        // Sisipkan di posisi kursor
+                        const startPos = inputField.selectionStart;
+                        const endPos = inputField.selectionEnd;
+                        inputField.value = inputField.value.substring(0, startPos) + teksPecahan + inputField.value.substring(endPos, inputField.value.length);
+                        
+                        // Fokus dan render ulang preview
+                        inputField.focus();
+                        previewMath();
+                    } else {
+                        swal("Gagal", "Angka Atas dan Angka Bawah wajib diisi!", "error");
+                    }
+                }
+            });
+        }
+
+        window.insertSimbol = function(simbol, targetId) {
+            const inputField = document.getElementById(targetId);
+            const teks = ` \\(${simbol}\\) `;
+            const startPos = inputField.selectionStart;
+            const endPos = inputField.selectionEnd;
+            inputField.value = inputField.value.substring(0, startPos) + teks + inputField.value.substring(endPos, inputField.value.length);
+            inputField.focus();
+            previewMath();
+        }
+
+        // ----------------------------------------------------
+        // FITUR LIVE PREVIEW (PRATINJAU REAL-TIME)
+        // ----------------------------------------------------
+        let timeoutPreview;
+        window.previewMath = function() {
+            clearTimeout(timeoutPreview);
+            timeoutPreview = setTimeout(() => {
+                // Pindahkan teks ke dalam div preview
+                document.getElementById('prevPertanyaan').innerHTML = document.getElementById('inputPertanyaan').value || '-';
+                document.getElementById('prevA').innerHTML = document.getElementById('inputA').value || '-';
+                document.getElementById('prevB').innerHTML = document.getElementById('inputB').value || '-';
+                document.getElementById('prevC').innerHTML = document.getElementById('inputC').value || '-';
+                document.getElementById('prevD').innerHTML = document.getElementById('inputD').value || '-';
+                
+                // Minta MathJax untuk merender ulang div tersebut
+                if (window.MathJax) {
+                    MathJax.typesetPromise([
+                        document.getElementById('prevPertanyaan'),
+                        document.getElementById('prevA'),
+                        document.getElementById('prevB'),
+                        document.getElementById('prevC'),
+                        document.getElementById('prevD')
+                    ]);
+                }
+            }, 300); // Tunggu 300ms setelah guru berhenti mengetik agar tidak memberatkan browser
+        }
+
+
+        // ----------------------------------------------------
+        // LOGIKA STANDAR (TAMBAH, EDIT, HAPUS)
+        // ----------------------------------------------------
+        window.bukaModalTambah = function() {
+            document.getElementById('formSoal').reset();
+            document.getElementById('soalId').value = "";
+            document.getElementById('modalTitle').innerHTML = "<i class='bx bx-plus-circle'></i> Tambah Soal Baru";
+            previewMath(); // Bersihkan preview
+            modalSoal.show();
+        }
+
+        window.bukaModalEdit = function(id) {
+            const kategori = kategoriSelect.value;
+            get(child(ref(db), `BankSoal/${kategori}/${id}`)).then((snapshot) => {
+                if(snapshot.exists()) {
+                    const data = snapshot.val();
+                    document.getElementById('soalId').value = id;
+                    document.getElementById('inputPertanyaan').value = data.pertanyaan;
+                    document.getElementById('inputA').value = data.pilihanA;
+                    document.getElementById('inputB').value = data.pilihanB;
+                    document.getElementById('inputC').value = data.pilihanC;
+                    document.getElementById('inputD').value = data.pilihanD;
+                    document.getElementById('inputKunci').value = data.jawabanBenar;
+                    
+                    document.getElementById('modalTitle').innerHTML = "<i class='bx bx-edit'></i> Edit Soal";
+                    previewMath(); // Munculkan preview segera setelah data terisi
+                    modalSoal.show();
+                }
+            });
+        }
+
+        window.hapusSoal = function(id) {
+            swal({
+                title: "Hapus Soal?",
+                text: "Soal ini akan dihapus permanen dari database.",
+                icon: "warning",
+                buttons: ["Batal", "Ya, Hapus"],
+                dangerMode: true,
+            }).then((willDelete) => {
+                if (willDelete) {
+                    const kategori = kategoriSelect.value;
+                    remove(ref(db, `BankSoal/${kategori}/${id}`)).then(() => {
+                        swal("Terhapus!", "Soal berhasil dihapus.", "success");
+                    });
+                }
+            });
+        }
+
+        document.getElementById('formSoal').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btnSimpan = document.getElementById('btnSimpan');
+            btnSimpan.disabled = true;
+            btnSimpan.innerHTML = `<i class='bx bx-loader-alt bx-spin'></i> Menyimpan...`;
+
+            const kategori = kategoriSelect.value;
+            const soalId = document.getElementById('soalId').value;
+            const dataSoal = {
+                pertanyaan: document.getElementById('inputPertanyaan').value,
+                pilihanA: document.getElementById('inputA').value,
+                pilihanB: document.getElementById('inputB').value,
+                pilihanC: document.getElementById('inputC').value,
+                pilihanD: document.getElementById('inputD').value,
+                jawabanBenar: document.getElementById('inputKunci').value
+            };
+
+            if(soalId) {
+                update(ref(db, `BankSoal/${kategori}/${soalId}`), dataSoal).then(() => {
+                    modalSoal.hide();
+                    swal("Berhasil!", "Soal berhasil diperbarui.", "success");
+                }).finally(() => { resetBtn(btnSimpan); });
+            } else {
+                push(ref(db, `BankSoal/${kategori}`), dataSoal).then(() => {
+                    modalSoal.hide();
+                    swal("Berhasil!", "Soal baru berhasil ditambahkan.", "success");
+                }).finally(() => { resetBtn(btnSimpan); });
+            }
+        });
+
+        function resetBtn(btn) {
+            btn.disabled = false;
+            btn.innerHTML = `<i class='bx bx-save'></i> Simpan Soal`;
+        }
+    </script>
+</body>
+</html>
