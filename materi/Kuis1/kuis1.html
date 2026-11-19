@@ -537,10 +537,17 @@
                 inputs.forEach(input => {
                     input.addEventListener('click', function () {
                         if(soal_nav[y]){
-                            soal_nav[y].classList.remove("belum");
-                            soal_nav[y].classList.add("sudah");
-                            soal_nav[y].style.backgroundColor = "#ffc107";
-                            soal_nav[y].style.color = "#000";
+                            if (input.classList.contains("terpilih")) {
+                                soal_nav[y].classList.remove("sudah");
+                                soal_nav[y].classList.add("belum");
+                                soal_nav[y].style.backgroundColor = "";
+                                soal_nav[y].style.color = "";
+                            } else {
+                                soal_nav[y].classList.remove("belum");
+                                soal_nav[y].classList.add("sudah");
+                                soal_nav[y].style.backgroundColor = "#ffc107";
+                                soal_nav[y].style.color = "#000";
+                            }
                         }
                     });
                 });
